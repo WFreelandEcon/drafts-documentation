@@ -10,13 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Documentation for Drafts 5" />
 <meta property="og:description" content="Documentation for Drafts 5" />
+<link rel="canonical" href="http://localhost:4000/drafts-documentation/scripting/" />
+<meta property="og:url" content="http://localhost:4000/drafts-documentation/scripting/" />
 <meta property="og:site_name" content="Drafts 5" />
 <script type="application/ld+json">
-{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"/drafts-documentation/scripting/","publisher":null,"image":null,"headline":"Scripting","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"http://localhost:4000/drafts-documentation/scripting/","publisher":null,"image":null,"headline":"Scripting","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=b8e2bdf63ea5f6012892fab5dfef111e8ec07453">
+    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=87d9c252dfb218b51e139a0812de610f9c4c84c6">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,6 +32,7 @@
 
 <p class="view">
 <a href="/drafts-documentation/">Home</a><br>
+<a href="/drafts-documentation/actions/">Sample Action Groups</a><br>
 <a href="/drafts-documentation/scripting/">Scripting</a><br>
 <a href="/drafts-documentation/urls/">URLs</a><br>
 </p>
@@ -46,6 +49,8 @@
       <h1 id="scripting">Scripting</h1>
 
 <p>Drafts actions may contain Script steps which execute Javascript. The Javascript engine is implemented using the <a href="https://developer.apple.com/documentation/javascriptcore">JavaScriptCore</a> implementation Apple ships with the host platform, and all standard libraries are available to work with native Javascript data types.  Note that this is not a browser hosted Javascript environment and will not have access to the same extensions to the language provided by browsers, like the Document Object Model and XHTTP objects.</p>
+
+<p><a href="https://www.w3schools.com/jsref/default.asp">w3schools.com Javascript reference</a> is an excellent resource on basic language objects and functions.</p>
 
 <p>Drafts extends the Javascript environment with many objects to allow manipulation of drafts, the editor - and to interact with system and online services.</p>
 
