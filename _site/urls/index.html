@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>URLs | Drafts 5</title>
+<meta property="og:title" content="URLs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for Drafts 5" />
+<meta property="og:description" content="Documentation for Drafts 5" />
+<meta property="og:site_name" content="Drafts 5" />
+<script type="application/ld+json">
+{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"/urls/","publisher":null,"image":null,"headline":"URLs","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=826de933b616d7f5e38eaebf7ae90a3d7f8fbcda">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="http://github.com/pages/agiletortoise/drafts-documentation"> <h1>Drafts 5</h1> </a>
+        <p>Documentation for Drafts 5</p>
+
+<p class="view">
+<a href="/">Home</a><br>
+<a href="/scripting/">Scripting</a><br>
+<a href="/urls/">URLs</a><br>
+</p>
+        
+          <p class="view"><a href="http://github.com/agiletortoise/drafts-documentation">Project on GitHub <small></small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="url-actions">URL Actions</h1>
+
+<p>Drafts implement URL actions based on <a href="http://x-callback-url.com/">the x-callback-url specification</a>, and registers the <strong>drafts5:</strong> URL scheme.  All actions below should be formatted as follows:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">drafts5://x-callback-url/[actionName]?[queryParameters]</code></li>
+</ul>
+
+<p>All URLs should be proper valid URLs with URL encoded values in query arguments. With a few exceptions, all actions support x-callback-url x-success, x-error and x-cancel arguments where appropriate.</p>
+
+<h2 id="supported-actions">Supported Actions</h2>
+
+<h3 id="create">/create</h3>
+
+<p>Create a new draft with the content passed in the “text” argument.</p>
+
+<ul>
+  <li><strong>Arguments</strong>
+    <ul>
+      <li><strong>text</strong> <em>[string, required]</em> : Text to be used at the content of the new draft.</li>
+      <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
+    </ul>
+  </li>
+  <li><strong>Examples</strong>
+    <ul>
+      <li><code class="highlighter-rouge">drafts5://x-callback-url/create?text=Hello%20World</code>
+        <ul>
+          <li>Create new draft with the content “Hello World”</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="open">/open</h3>
+
+<p>Open an existing draft based on the UUID argument.</p>
+
+<ul>
+  <li><strong>Arguments</strong>
+    <ul>
+      <li><strong>uuid</strong> <em>[string, required]</em> : The UUID identifier for a draft.</li>
+      <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
+    </ul>
+  </li>
+  <li><strong>Examples</strong>
+    <ul>
+      <li><code class="highlighter-rouge">drafts5://x-callback-url/open?uuid=UUID-TO-VALID-DRAFT</code>
+        <ul>
+          <li>Open the draft in the editor with the UUID provided.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="get">/get</h3>
+
+<p>Return the current content of the draft specified by the UUID argument as an argument to the x-success URL provided.</p>
+
+<ul>
+  <li><strong>Arguments</strong>
+    <ul>
+      <li><strong>uuid</strong> <em>[string, required]</em> : The UUID identifier for a draft.</li>
+      <li><strong>retParam</strong> <em>[string, optional]</em> : The name of the argument to use to pass the draft content back to the x-success URL.  Defaults to “text”, but if the requesting app expects another value (like Workflow’s “input”) use this argument to override.</li>
+    </ul>
+  </li>
+  <li><strong>Examples</strong>
+    <ul>
+      <li><code class="highlighter-rouge">drafts5://x-callback-url/get?uuid=UUID-TO-VALID-DRAFT&amp;x-success=APP-URL</code>
+        <ul>
+          <li>Retrieves the content of the identified draft, and calls the x-success URL with the argument <code class="highlighter-rouge">text=DRAFT-CONTENT</code> added.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="prepend">/prepend</h3>
+
+<p>Prepend the passed text to the beginning of a draft identified by the UUID argument.</p>
+
+<ul>
+  <li><strong>Arguments</strong>
+    <ul>
+      <li><strong>uuid</strong> <em>[string, required]</em> : The UUID identifier for a draft.</li>
+      <li><strong>text</strong> <em>[string, required]</em> : Text to add.</li>
+      <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
+    </ul>
+  </li>
+  <li><strong>Examples</strong>
+    <ul>
+      <li><code class="highlighter-rouge">drafts5://x-callback-url/prepend?uuid=UUID-TO-VALID-DRAFT&amp;text=TEXT-TO-ADD</code>
+        <ul>
+          <li>Adds “TEXT-TO-ADD” to the beginning of the draft.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="append">/append</h3>
+
+<p>Append the passed text to the end of a draft identified by the UUID argument.</p>
+
+<ul>
+  <li><strong>Arguments</strong>
+    <ul>
+      <li><strong>uuid</strong> <em>[string, required]</em> : The UUID identifier for a draft.</li>
+      <li><strong>text</strong> <em>[string, required]</em> : Text to add.</li>
+      <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
+    </ul>
+  </li>
+  <li><strong>Examples</strong>
+    <ul>
+      <li><code class="highlighter-rouge">drafts5://x-callback-url/append?uuid=UUID-TO-VALID-DRAFT&amp;text=TEXT-TO-ADD</code>
+        <ul>
+          <li>Adds “TEXT-TO-ADD” to the end of the draft.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="runaction">/runAction</h3>
+
+<p>Run a drafts action on the passed text without saving that text to a draft.</p>
+
+<ul>
+  <li><strong>Arguments</strong>
+    <ul>
+      <li><strong>text</strong> <em>[string, required]</em> : Text to add.</li>
+      <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
+    </ul>
+  </li>
+  <li><strong>Examples</strong>
+    <ul>
+      <li><code class="highlighter-rouge">drafts5://x-callback-url/prepend?uuid=UUID-TO-VALID-DRAFT&amp;text=TEXT-TO-ADD</code>
+        <ul>
+          <li>Adds “TEXT-TO-ADD” to the beginning of the draft.</li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">drafts5://x-callback-url/runAction?text=TEXT&amp;action=VALID-ACTION-NAME</code>
+        <ul>
+          <li>If found, runs the VALID-ACTION-NAME action on an unsaved draft containing “TEXT”.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="dictate">/dictate</h3>
+
+<p>Open Drafts dictation interface. Pass the resulting dictated text to the x-success URL instead of saving it in Drafts.</p>
+
+<ul>
+  <li><strong>Arguments</strong>
+    <ul>
+      <li><strong>retParam</strong> <em>[string, optional]</em> : The name of the argument to use to pass the draft content back to the x-success URL.  Defaults to “text”, but if the requesting app expects another value (like Workflow’s “input”) use this argument to override.</li>
+    </ul>
+  </li>
+  <li><strong>Examples</strong>
+    <ul>
+      <li><code class="highlighter-rouge">drafts5://x-callback-url/dictate?x-success=APP-URL</code>
+        <ul>
+          <li>Retrieves the content of the identified draft, and calls the x-success URL with the argument <code class="highlighter-rouge">text=DICTATED-TEXT</code> added.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="http://github.com/agiletortoise">agiletortoise</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>
