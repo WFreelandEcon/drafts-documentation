@@ -6,5 +6,5 @@ This documentation covers pre-release features and may be incomplete or subject 
 
 #### Pages
 
-- [Scripting](/scripting/)
-- [URLs](/urls/)
+- [Scripting]({{ site.baseurl }}/scripting/)
+- [URLs]({{ site.baseurl }}/urls/)
