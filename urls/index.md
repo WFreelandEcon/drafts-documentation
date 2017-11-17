@@ -68,6 +68,16 @@ Append the passed text to the end of a draft identified by the UUID argument.
   - `drafts5://x-callback-url/append?uuid=UUID-TO-VALID-DRAFT&text=TEXT-TO-ADD`
     - Adds "TEXT-TO-ADD" to the end of the draft.
 
+### /search
+
+Open drafts directly to the draft search field.
+
+- **Arguments**
+  - **query** *[string, optional]* : Initial text to use in the search.
+  - **tag** *[string, optional]* : Tag to use to filter the query.
+- **Examples**
+  - `drafts5://x-callback-url/search?query=QUERY-TEXT`
+
 ### /runAction
 
 Run a drafts action on the passed text without saving that text to a draft.
