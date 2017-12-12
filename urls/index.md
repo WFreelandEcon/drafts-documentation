@@ -100,3 +100,14 @@ Open Drafts dictation interface. Pass the resulting dictated text to the x-succe
 - **Examples**
   - `drafts5://x-callback-url/dictate?x-success=APP-URL`
     - Retrieves the content of the identified draft, and calls the x-success URL with the argument `text=DICTATED-TEXT` added.
+
+### /arrange
+
+Open Drafts arrange interface. Pass the resulting arranged text to the x-success URL instead of saving it in Drafts.
+
+- **Arguments**
+  - **text** *[string, required]* : Text to arrange.
+  - **retParam** *[string, optional]* : The name of the argument to use to pass the draft content back to the x-success URL.  Defaults to "text", but if the requesting app expects another value (like Workflow's "input") use this argument to override.
+- **Examples**
+  - `drafts5://x-callback-url/arrange?x-success=APP-URL`
+    - Retrieves the content of the identified draft, and calls the x-success URL with the argument `text=ARRANGED-TEXT` added.
