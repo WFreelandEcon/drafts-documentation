@@ -1,4 +1,9 @@
-# Sample Action Groups
+# Actions
+
+- [Action Steps]({{ site.base_url }}/actions/steps/)
+
+
+## Sample Action Groups
 
 Below are several sample Action Groups to be installed in Drafts 5.  We will be updating these groups as progress is made on the preview. To install, click on one of the below links on a device with the Drafts 5 Preview installed.
 
