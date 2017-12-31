@@ -3,7 +3,7 @@ title: Action Step: Clipboard
 ---
 # Action Step: Clipboard
 
-Clipboard steps can replace, append or pretend to the system clipboard.
+Clipboard steps can replace, append or prepend to the system clipboard.
 
 ## Examples
 
@@ -15,7 +15,7 @@ Clipboard steps can replace, append or pretend to the system clipboard.
 
 The following options can be configured on this step:
 
-- **Template**: Template for content. 
+- **Template**: Template for content.
 - **Write Type**
     - _replace_: Replaces the current content of the clipboard.
     - _prepend_: Prepends content to the beginning of the system clipboard.

@@ -1,6 +1,6 @@
 # Actions
 
-- [Action Steps]({{ site.base_url }}/actions/steps/)
+- [Action Steps]({{ site.baseurl }}/actions/steps/)
 
 
 ## Sample Action Groups
