@@ -18,7 +18,7 @@
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=87d9c252dfb218b51e139a0812de610f9c4c84c6">
+    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=6d290c8df6899b9f5e399266b055b636393a562d">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -32,7 +32,8 @@
 
 <p class="view">
 <a href="/drafts-documentation/">Home</a><br>
-<a href="/drafts-documentation/actions/">Sample Action Groups</a><br>
+<a href="/drafts-documentation/actions/">Actions</a><br>
+<a href="/drafts-documentation/settings/">Settings</a><br>
 <a href="/drafts-documentation/scripting/">Scripting</a><br>
 <a href="/drafts-documentation/urls/">URLs</a><br>
 </p>
@@ -230,6 +231,28 @@
       <li><code class="highlighter-rouge">drafts5://x-callback-url/dictate?x-success=APP-URL</code>
         <ul>
           <li>Retrieves the content of the identified draft, and calls the x-success URL with the argument <code class="highlighter-rouge">text=DICTATED-TEXT</code> added.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="arrange">/arrange</h3>
+
+<p>Open Drafts arrange interface. Pass the resulting arranged text to the x-success URL instead of saving it in Drafts.</p>
+
+<ul>
+  <li><strong>Arguments</strong>
+    <ul>
+      <li><strong>text</strong> <em>[string, required]</em> : Text to arrange.</li>
+      <li><strong>retParam</strong> <em>[string, optional]</em> : The name of the argument to use to pass the draft content back to the x-success URL.  Defaults to “text”, but if the requesting app expects another value (like Workflow’s “input”) use this argument to override.</li>
+    </ul>
+  </li>
+  <li><strong>Examples</strong>
+    <ul>
+      <li><code class="highlighter-rouge">drafts5://x-callback-url/arrange?x-success=APP-URL</code>
+        <ul>
+          <li>Retrieves the content of the identified draft, and calls the x-success URL with the argument <code class="highlighter-rouge">text=ARRANGED-TEXT</code> added.</li>
         </ul>
       </li>
     </ul>

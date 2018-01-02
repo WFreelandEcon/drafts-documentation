@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Templates | Drafts 5</title>
+<meta property="og:title" content="Templates" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for Drafts 5" />
+<meta property="og:description" content="Documentation for Drafts 5" />
+<link rel="canonical" href="http://localhost:4000/drafts-documentation/actions/templates.html" />
+<meta property="og:url" content="http://localhost:4000/drafts-documentation/actions/templates.html" />
+<meta property="og:site_name" content="Drafts 5" />
+<script type="application/ld+json">
+{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"http://localhost:4000/drafts-documentation/actions/templates.html","publisher":null,"image":null,"headline":"Templates","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=6d290c8df6899b9f5e399266b055b636393a562d">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="http://github.com/pages/agiletortoise/drafts-documentation"> <h1>Drafts 5</h1> </a>
+        <p>Documentation for Drafts 5</p>
+
+<p class="view">
+<a href="/drafts-documentation/">Home</a><br>
+<a href="/drafts-documentation/actions/">Actions</a><br>
+<a href="/drafts-documentation/settings/">Settings</a><br>
+<a href="/drafts-documentation/scripting/">Scripting</a><br>
+<a href="/drafts-documentation/urls/">URLs</a><br>
+</p>
+        
+          <p class="view"><a href="http://github.com/agiletortoise/drafts-documentation">Project on GitHub <small></small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="templates">Templates</h1>
+
+<p>Drafts actions support a number of tags for dynamically inserting text when an action is performed. These can be used in most fields that accept text in actions, including not only fields for content, but for naming, creating subject lines, etc.</p>
+
+<h2 id="tags">Tags</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">[[draft]]</code> The full text of the draft.</li>
+  <li><code class="highlighter-rouge">[[title]]</code> The first line of the draft only.</li>
+  <li><code class="highlighter-rouge">[[body]]</code> The remainder of the draft text after the first line is removed.</li>
+  <li><code class="highlighter-rouge">[[selection]]</code> If text was selected within the draft before selecting an action, this tag will return only that selected text. If no text was selected, it will return the full text of the draft.</li>
+  <li><code class="highlighter-rouge">[[line|n]]</code> The text of a specific line number in the draft, where “n” is the line number. i.e. <code class="highlighter-rouge">[[line|1]]</code>, <code class="highlighter-rouge">[[line|2]]</code>.</li>
+  <li><code class="highlighter-rouge">[[line|n..n]]</code> In addition to specific lines, the lines tag (above) can accept ranges of lines, such as <code class="highlighter-rouge">[[line|2..5]]</code> for lines 2 through 5. This initial or trailing number in the range can be omitted to indicate the beginning or end, i.e. <code class="highlighter-rouge">[[line|2..]]</code> is line 2 through the end of the draft, <code class="highlighter-rouge">[[line|..4]]</code> is the first for lines of the draft.</li>
+  <li><code class="highlighter-rouge">[[uuid]]</code> A unique identifier for the current draft.</li>
+  <li><code class="highlighter-rouge">[[draft_open_url]]</code> A URL which can be used as a bookmark to open Drafts and select the current draft.</li>
+  <li><code class="highlighter-rouge">[[clipboard]]</code> The current contents of the iOS clipboard.</li>
+  <li><code class="highlighter-rouge">[[date]]</code> Timestamp in the format YYYY-MM-DD.</li>
+  <li><code class="highlighter-rouge">[[date|format]]</code> Timestamp, formatted based on a custom strfime format string. For example <code class="highlighter-rouge">[[date|%m-%d-%Y]]</code> becomes “01–02–2013”.</li>
+  <li><code class="highlighter-rouge">[[created|format]]</code> Same as “date”, but returns the timestamp for the creation of the draft, rather than the current time.</li>
+  <li><code class="highlighter-rouge">[[modified|format]]</code> Same as “date”, but returns the timestamp for the last modification date of the draft content, rather than the current time.</li>
+  <li><code class="highlighter-rouge">[[longitude]]</code> The current device location longitude.</li>
+  <li><code class="highlighter-rouge">[[latitude]]</code> The current device location latitude.</li>
+  <li><code class="highlighter-rouge">[[created_longitude]]</code> The location longitude where the draft was created.</li>
+  <li><code class="highlighter-rouge">[[created_latitude ]]</code> The location latitude where the draft was created.</li>
+  <li><code class="highlighter-rouge">[[modified_longitude]]</code> The location longitude where the content of the draft was last modified.</li>
+  <li><code class="highlighter-rouge">[[modified_latitude]]</code> The location latitude where the content of the draft was last modified.</li>
+  <li><code class="highlighter-rouge">[[selection_start]]</code> The integer index of the start location of the last text selection in the draft.</li>
+  <li><code class="highlighter-rouge">[[selection_length]]</code> The number of characters in the last text selection in the draft.</li>
+  <li><code class="highlighter-rouge">[[time]]</code> Timestamp in the format YYYY-MM-DD-HH-MM-SS.</li>
+</ul>
+
+<h2 id="other-special-markup">Other Special markup</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">{{ }}</code> Wrap text in double-curly brackets to have the text URL encoded.</li>
+  <li><code class="highlighter-rouge">%% %%</code> Wrap text in double percent signs to run the enclosed text through the Markdown engine and convert it to HTML.  This is useful to export Markdown to HTML, use in HTML Preview steps or other purposes.  By default, HTML5 compliant HTML is generated, but if you include the xhtml parameter, like <code class="highlighter-rouge">%%xhtml|...%%</code>, XHTML will be output.  This is needed to generate HTML compatible with Evernote’s ENML markup.</li>
+</ul>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="http://github.com/agiletortoise">agiletortoise</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/drafts-documentation/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>
