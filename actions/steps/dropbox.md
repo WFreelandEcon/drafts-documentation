@@ -1,5 +1,5 @@
 ---
-title: Action Step: Dropbox
+title: Action Step – Dropbox
 ---
 # Action Step: Dropbox
 

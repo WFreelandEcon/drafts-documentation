@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Action Step: Callback URL | Drafts 5</title>
+<meta property="og:title" content="Action Step: Callback URL" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for Drafts 5" />
+<meta property="og:description" content="Documentation for Drafts 5" />
+<link rel="canonical" href="http://localhost:4000/drafts-documentation/actions/steps/callbackurl.html" />
+<meta property="og:url" content="http://localhost:4000/drafts-documentation/actions/steps/callbackurl.html" />
+<meta property="og:site_name" content="Drafts 5" />
+<script type="application/ld+json">
+{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"http://localhost:4000/drafts-documentation/actions/steps/callbackurl.html","publisher":null,"image":null,"headline":"Action Step: Callback URL","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=20f8b2980cf67f9afbb8ff8a4dc5ecf80d7089e7">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="http://github.com/pages/agiletortoise/drafts-documentation"> <h1>Drafts 5</h1> </a>
+        <p>Documentation for Drafts 5</p>
+
+<p class="view">
+<a href="/drafts-documentation/">Home</a><br>
+<a href="/drafts-documentation/actions/">Actions</a><br>
+<a href="/drafts-documentation/settings/">Settings</a><br>
+<a href="/drafts-documentation/scripting/">Scripting</a><br>
+<a href="/drafts-documentation/urls/">URLs</a><br>
+</p>
+        
+          <p class="view"><a href="http://github.com/agiletortoise/drafts-documentation">Project on GitHub <small></small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="action-step-callback-url">Action Step: Callback URL</h1>
+
+<p>Similar to <a href="/drafts-documentation/actions/steps/openurl.md">Open URL</a>, but for use with other apps with support <a href="http://x-callback-url.com/">x-callback-url</a> to return to other apps after completing a URL action.</p>
+
+<p>When using this step, create a target URL in the template, but do <strong>not</strong> include x-callback-url return parameters (x-success, x-error, x-cancel) as Drafts will generate and add those parameters.</p>
+
+<p>If the “Wait for response” option is enabled, Drafts will hold processing of the action waiting on a response from the target app. If the target app responds using x-success, the action will continue and any response parameters provided by the target app will be available in the <code class="highlighter-rouge">context.callbackResponses</code> (<a href="https://github.com/agiletortoise/drafts-documentation/wiki/Context">docs</a>) object for subsequent script steps in the action. If the target app responds with x-cancel callback, the action will be cancelled - x-error will fail the action and log responses.</p>
+
+<p>If “Wait for response” is enabled, Drafts will wait for 120 seconds for a response from the target app, and cancel the remainder of the action if none is received.</p>
+
+<h2 id="options">Options</h2>
+
+<ul>
+  <li><strong>Template</strong>: Template for URL.</li>
+  <li><strong>Encode tags</strong>: If enabled, the output of Drafts template tags will automatically be encoded for use in URL query parameters. For example, if the current draft has the text “Hello World” the <code class="highlighter-rouge">[[draft]]</code> tag would return “Hello%20World” with this option enabled. If you are using tags previous encoded in prior action steps, this can be diabled.</li>
+  <li><strong>Wait for response</strong>: If enabled, Drafts will wait for a callback response from a target app. See details above.</li>
+</ul>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="http://github.com/agiletortoise">agiletortoise</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/drafts-documentation/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>

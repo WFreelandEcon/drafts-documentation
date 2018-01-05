@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Action Step – Run Workflow | Drafts 5</title>
+<meta property="og:title" content="Action Step – Run Workflow" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for Drafts 5" />
+<meta property="og:description" content="Documentation for Drafts 5" />
+<link rel="canonical" href="http://localhost:4000/drafts-documentation/actions/steps/runworkflow.html" />
+<meta property="og:url" content="http://localhost:4000/drafts-documentation/actions/steps/runworkflow.html" />
+<meta property="og:site_name" content="Drafts 5" />
+<script type="application/ld+json">
+{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"http://localhost:4000/drafts-documentation/actions/steps/runworkflow.html","publisher":null,"image":null,"headline":"Action Step – Run Workflow","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=20f8b2980cf67f9afbb8ff8a4dc5ecf80d7089e7">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="http://github.com/pages/agiletortoise/drafts-documentation"> <h1>Drafts 5</h1> </a>
+        <p>Documentation for Drafts 5</p>
+
+<p class="view">
+<a href="/drafts-documentation/">Home</a><br>
+<a href="/drafts-documentation/actions/">Actions</a><br>
+<a href="/drafts-documentation/settings/">Settings</a><br>
+<a href="/drafts-documentation/scripting/">Scripting</a><br>
+<a href="/drafts-documentation/urls/">URLs</a><br>
+</p>
+        
+          <p class="view"><a href="http://github.com/agiletortoise/drafts-documentation">Project on GitHub <small></small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="action-step-run-workflow">Action Step: Run Workflow</h1>
+
+<p>Run a named workflow in the <a href="https://workflow.is">Workflow app</a>.</p>
+
+<p>If the “Wait for response” option is enabled, Drafts will hold processing of the action waiting on a response from Workflow. If the Workflow responds using x-success, the action will continue and any response parameters provided by the target app will be available in the <code class="highlighter-rouge">context.callbackResponses</code> (<a href="https://github.com/agiletortoise/drafts-documentation/wiki/Context">docs</a>) object for subsequent script steps in the action. If the target app responds with x-cancel callback, the action will be cancelled - x-error will fail the action and log responses.</p>
+
+<p>If “Wait for response” is enabled, Drafts will wait for 120 seconds for a response from the target app, and cancel the remainder of the action if none is received.</p>
+
+<h2 id="options">Options</h2>
+
+<ul>
+  <li><strong>Workflow name</strong>: Name of a valid Workflow in the Workflow app. Must match exactly.</li>
+  <li><strong>Template</strong>: Template for content to send to Workflow as an “input” parameter.</li>
+  <li><strong>Wait for response</strong>: If enabled, Drafts will wait for a callback response from a target app. See details above.</li>
+</ul>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="http://github.com/agiletortoise">agiletortoise</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/drafts-documentation/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>
