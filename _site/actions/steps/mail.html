@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>title: Action Step – Mail | Drafts 5</title>
+<meta property="og:title" content="title: Action Step – Mail" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for Drafts 5" />
+<meta property="og:description" content="Documentation for Drafts 5" />
+<link rel="canonical" href="http://localhost:4000/drafts-documentation/actions/steps/mail.html" />
+<meta property="og:url" content="http://localhost:4000/drafts-documentation/actions/steps/mail.html" />
+<meta property="og:site_name" content="Drafts 5" />
+<script type="application/ld+json">
+{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"http://localhost:4000/drafts-documentation/actions/steps/mail.html","publisher":null,"image":null,"headline":"title: Action Step – Mail","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=991d3fdfbb06ac01a92c36a25e9b98d5df93719f">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="http://github.com/pages/agiletortoise/drafts-documentation"> <h1>Drafts 5</h1> </a>
+        <p>Documentation for Drafts 5</p>
+
+<p class="view">
+<a href="/drafts-documentation/">Home</a><br>
+<a href="/drafts-documentation/actions/">Actions</a><br>
+<a href="/drafts-documentation/settings/">Settings</a><br>
+<a href="/drafts-documentation/scripting/">Scripting</a><br>
+<a href="/drafts-documentation/urls/">URLs</a><br>
+</p>
+        
+          <p class="view"><a href="http://github.com/agiletortoise/drafts-documentation">Project on GitHub <small></small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="title-action-step--mail">title: Action Step – Mail</h2>
+<h1 id="action-step-mail">Action Step: Mail</h1>
+
+<p>Send pre-configured email messages either using Mail.app or web services in the background.</p>
+
+<h2 id="examples">Examples</h2>
+
+<p><em>(Open links on device with Drafts to install)</em></p>
+
+<ul>
+  <li><a href="drafts5://action?data=%7B%22uuid%22:%2297572F43-B478-4734-9ECC-32EB6B396C96%22,%22steps%22:%5B%7B%22type%22:%22mail%22,%22data%22:%7B%22sendInBackground%22:%22false%22,%22ccRecipients%22:%22%22,%22toRecipients%22:%22%22,%22bccRecipients%22:%22%22,%22sendAsHTML%22:%22false%22,%22subjectTemplate%22:%22%5B%5Btitle%5D%5D%22,%22bodyTemplate%22:%22%5B%5Bbody%5D%5D%22%7D,%22uuid%22:%227FD9F5F9-505F-415C-89FE-DDF6FFD6A84D%22%7D%5D,%22shortName%22:%22%22,%22shouldConfirm%22:false,%22disposition%22:3,%22keyCommand%22:%7B%22optionKey%22:false,%22input%22:%22%22,%22controlKey%22:false,%22commandKey%22:false,%22type%22:%22action%22,%22discoverabilityTitle%22:%22Mail%22,%22shiftKey%22:false%7D,%22logLevel%22:2,%22notificationType%22:2,%22tintColor%22:%22indigo%22,%22actionDescription%22:%22%22,%22keyUseIcon%22:false,%22icon%22:%22action_email_filled%22,%22visibility%22:2,%22supportedPlatform%22:%22any%22,%22groupDisposition%22:0,%22name%22:%22Mail%22%7D">Mail</a></li>
+  <li><a href="drafts5://action?data=%7B%22uuid%22:%22B1EE61CE-AA84-415B-A5F9-C66CCEB0600F%22,%22steps%22:%5B%7B%22type%22:%22mail%22,%22data%22:%7B%22sendInBackground%22:%22false%22,%22ccRecipients%22:%22%22,%22toRecipients%22:%22%22,%22bccRecipients%22:%22%22,%22sendAsHTML%22:%22true%22,%22subjectTemplate%22:%22%5B%5Btitle%5D%5D%22,%22bodyTemplate%22:%22%25%25%5B%5Bbody%5D%5D%25%25%22%7D,%22uuid%22:%2288EF3DF8-129F-4DD0-BA64-CE9FEF82503F%22%7D%5D,%22shortName%22:%22%22,%22shouldConfirm%22:false,%22disposition%22:3,%22keyCommand%22:%7B%22optionKey%22:false,%22input%22:%22%22,%22controlKey%22:false,%22commandKey%22:false,%22type%22:%22action%22,%22discoverabilityTitle%22:%22Markdown%20Mail%22,%22shiftKey%22:false%7D,%22logLevel%22:2,%22notificationType%22:2,%22tintColor%22:%22gray%22,%22actionDescription%22:%22%22,%22keyUseIcon%22:false,%22icon%22:%22action_email_filled%22,%22visibility%22:2,%22supportedPlatform%22:%22any%22,%22groupDisposition%22:0,%22name%22:%22Markdown%20Mail%22%7D">Markdown Mail</a></li>
+</ul>
+
+<h2 id="options">Options</h2>
+
+<ul>
+  <li><strong>Recipients</strong>: Comma separated list of recipient emails for each of the recipient types. These can be just email address, or “Name <email>" formatted - like "Joe Smith &lt;joe@smith.com&gt;, Jane Doe &lt;jane@doe.com&gt;".
+</email>    <ul>
+      <li><strong>To</strong></li>
+      <li><strong>CC</strong></li>
+      <li><strong>BCC</strong></li>
+    </ul>
+  </li>
+  <li><strong>Subject</strong>: Template for the subject line.</li>
+  <li><strong>Body</strong>: Template for content of the message. If “Send as HTML” is enabled, this template is expected to output valid HTML, otherwise plain text.</li>
+  <li><strong>Send as HTML</strong>: If enabled, the mail is sent as formatted HTML email and the body template should output fully formed HTML. The most common use of this option is to run Markdown to HTML conversion to get rich-text mail.  In this case the simple template “%%[[body]]%%” can be used.</li>
+  <li><strong>Send in background</strong>: If enabled, the mail will be sent using a web service instead of Mail.app. This does not require user interaction, but recipients must be pre-configured and the email will come addressed “From: drafts5@drafts5.agiletortoise.com”. This is best suited for “Email to myself”, or to send to services which provide a dedicated unique incoming email address as a dropbox.</li>
+</ul>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="http://github.com/agiletortoise">agiletortoise</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/drafts-documentation/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>
