@@ -18,6 +18,7 @@ Create a new draft with the content passed in the "text" argument.
 - **Arguments**
   - **text** *[string, required]* : Text to be used at the content of the new draft.
   - **action** *[string, optional]* : Name of an action in the action list. If provided, this action will be run on the specified draft.
+  - **tag** *[string]* : Name of a tag to attach to the draft. Parameter can appear multiple times to add more than one tag.
 - **Examples**
   - `drafts5://x-callback-url/create?text=Hello%20World`
     - Create new draft with the content "Hello World"
@@ -52,6 +53,7 @@ Prepend the passed text to the beginning of a draft identified by the UUID argum
   - **uuid** *[string, required]* : The UUID identifier for a draft.
   - **text** *[string, required]* : Text to add.
   - **action** *[string, optional]* : Name of an action in the action list. If provided, this action will be run on the specified draft.
+  - **tag** *[string]* : Name of a tag to attach to the draft. Parameter can appear multiple times to add more than one tag.
 - **Examples**
   - `drafts5://x-callback-url/prepend?uuid=UUID-TO-VALID-DRAFT&text=TEXT-TO-ADD`
     - Adds "TEXT-TO-ADD" to the beginning of the draft.
@@ -64,6 +66,7 @@ Append the passed text to the end of a draft identified by the UUID argument.
   - **uuid** *[string, required]* : The UUID identifier for a draft.
   - **text** *[string, required]* : Text to add.
   - **action** *[string, optional]* : Name of an action in the action list. If provided, this action will be run on the specified draft.
+  - **tag** *[string]* : Name of a tag to attach to the draft. Parameter can appear multiple times to add more than one tag.
 - **Examples**
   - `drafts5://x-callback-url/append?uuid=UUID-TO-VALID-DRAFT&text=TEXT-TO-ADD`
     - Adds "TEXT-TO-ADD" to the end of the draft.
