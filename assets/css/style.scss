@@ -2,3 +2,12 @@
 ---
 
 @import "{{ site.theme }}";
+
+body {
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: normal;
+}
