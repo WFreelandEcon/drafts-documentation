@@ -12,4 +12,5 @@ title: Action Steps
 - [Run Workflow]({{ site.baseurl }}/actions/steps/runworkflow)
 - [Dropbox]({{ site.baseurl }}/actions/steps/dropbox)
 - [Twitter]({{ site.baseurl }}/actions/steps/twitter)
+- [Google Drive]({{ site.baseurl }}/actions/steps/googledrive)
 - [Export]({{ site.baseurl }}/actions/steps/export)
