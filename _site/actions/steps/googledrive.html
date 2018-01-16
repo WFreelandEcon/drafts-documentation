@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Action Step – Google Drive | Drafts 5</title>
+<meta property="og:title" content="Action Step – Google Drive" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for Drafts 5" />
+<meta property="og:description" content="Documentation for Drafts 5" />
+<link rel="canonical" href="http://localhost:4000/drafts-documentation/actions/steps/googledrive.html" />
+<meta property="og:url" content="http://localhost:4000/drafts-documentation/actions/steps/googledrive.html" />
+<meta property="og:site_name" content="Drafts 5" />
+<script type="application/ld+json">
+{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"http://localhost:4000/drafts-documentation/actions/steps/googledrive.html","publisher":null,"image":null,"headline":"Action Step – Google Drive","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=945a02c58f7dd63cd42cc2ff31e8fc8c989bd989">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="http://github.com/pages/agiletortoise/drafts-documentation"> <h1>Drafts 5</h1> </a>
+        <p>Documentation for Drafts 5</p>
+
+<p class="view">
+<a href="/drafts-documentation/">Home</a><br>
+<a href="/drafts-documentation/actions/">Actions</a><br>
+<a href="/drafts-documentation/settings/">Settings</a><br>
+<a href="/drafts-documentation/scripting/">Scripting</a><br>
+<a href="/drafts-documentation/urls/">URLs</a><br>
+</p>
+        
+          <p class="view"><a href="http://github.com/agiletortoise/drafts-documentation">Project on GitHub <small></small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="action-step-google-drive">Action Step: Google Drive</h1>
+
+<p>Create, append or prepend to files in <a href="http://drive.google.com">Google Drive</a>.</p>
+
+<h2 id="examples">Examples</h2>
+
+<ul>
+  <li><a href="drafts5://action?data=%7B%22uuid%22:%22C5E39021-0F06-4156-8038-635F2C59D191%22,%22steps%22:%5B%7B%22type%22:%22googleDrive%22,%22data%22:%7B%22writeType%22:%22create%22,%22folderTemplate%22:%22%22,%22oauthIdentifier%22:%22%22,%22template%22:%22%5B%5Bdraft%5D%5D%22,%22fileNameTemplate%22:%22%5B%5Btime%5D%5D%22%7D,%22uuid%22:%2282121098-28B4-4786-BDA2-F5C3272FC1C4%22%7D%5D,%22shortName%22:%22%22,%22shouldConfirm%22:false,%22disposition%22:3,%22keyCommand%22:%7B%22optionKey%22:false,%22input%22:%22%22,%22controlKey%22:false,%22commandKey%22:false,%22type%22:%22action%22,%22discoverabilityTitle%22:%22Save%20to%20Google%20Drive%22,%22shiftKey%22:false%7D,%22logLevel%22:2,%22notificationType%22:2,%22tintColor%22:%22red%22,%22actionDescription%22:%22Save%20to%20a%20timestamped%20file%20in%20the%20root%20of%20Google%20Drive.%22,%22keyUseIcon%22:false,%22icon%22:%22action_google_drive%22,%22visibility%22:2,%22supportedPlatform%22:%22any%22,%22groupDisposition%22:0,%22name%22:%22Save%20to%20Google%20Drive%22%7D">Save to Google Drive</a></li>
+  <li><a href="drafts5://action?data=%7B%22uuid%22:%22F1A04325-7CCC-4B8E-9AA0-7950D848C602%22,%22steps%22:%5B%7B%22type%22:%22googleDrive%22,%22data%22:%7B%22writeType%22:%22append%22,%22folderTemplate%22:%22%22,%22oauthIdentifier%22:%22%22,%22template%22:%22%23%23%20%5B%5Bcreated%5D%5D%5Cn%5B%5Bdraft%5D%5D%5Cn%22,%22fileNameTemplate%22:%22Journal-%5B%5Bdate%7C%25Y-%25m%5D%5D%22%7D,%22uuid%22:%224ECFBD7E-2619-4EF7-AA7C-00B13B6DD013%22%7D%5D,%22shortName%22:%22%22,%22shouldConfirm%22:false,%22disposition%22:3,%22keyCommand%22:%7B%22optionKey%22:false,%22input%22:%22%22,%22controlKey%22:false,%22commandKey%22:false,%22type%22:%22action%22,%22discoverabilityTitle%22:%22Append%20to%20Google%20Drive%20Journal%22,%22shiftKey%22:false%7D,%22logLevel%22:2,%22notificationType%22:2,%22tintColor%22:%22green%22,%22actionDescription%22:%22Append%20timestamp%20and%20draft%20contents%20to%20rolling%20monthly%20Journal%20file%20in%20the%20root%20of%20Google%20Drive.%22,%22keyUseIcon%22:false,%22icon%22:%22action_google_drive%22,%22visibility%22:2,%22supportedPlatform%22:%22any%22,%22groupDisposition%22:0,%22name%22:%22Append%20to%20Google%20Drive%20Journal%22%7D">Append to Google Drive Journal</a></li>
+</ul>
+
+<h2 id="options">Options</h2>
+
+<ul>
+  <li><strong>Name</strong>: Template for file name, including extension.</li>
+  <li><strong>Parent</strong>: Leave blank for root level of Google Drive, or include the name of a folder in the root level of Google Drive. The folder will be created when the action is run if it does not already exist.</li>
+  <li><strong>Template</strong>: Template for the content of the file.</li>
+  <li><strong>Write Type</strong>:
+    <ul>
+      <li><strong>create</strong>: Create a new file. If an existing file already exists at the location, create as new file with a number suffix added.</li>
+      <li><strong>replace</strong>: Create new file, overwriting an existing if it exists.</li>
+      <li><strong>prepend</strong>: Prepend template content at the beginning of the file. Create the file if it does not already exist.</li>
+      <li><strong>append</strong>: Append template content at the end of the file. Create the file if it does not already exist.</li>
+    </ul>
+  </li>
+  <li><strong>Identifier</strong>: A string identifier for the Google Drive account to use. This value is only needed if you wish to use more than one account with Drafts. If used, all actions with the same identifier will use the same alternate login for Google Drive.</li>
+</ul>
+
+
+      </section>
+      <footer>
+        
+        <p>by <a href="http://github.com/agiletortoise">agiletortoise</a></p>
+        
+      </footer>
+    </div>
+    <script src="/drafts-documentation/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>

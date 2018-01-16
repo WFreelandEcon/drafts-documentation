@@ -18,7 +18,7 @@
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=92276a974b968ba51887eef694968b58515bcb8f">
+    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=945a02c58f7dd63cd42cc2ff31e8fc8c989bd989">
     <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -53,7 +53,7 @@
 
 <p>When using this step, create a target URL in the template, but do <strong>not</strong> include x-callback-url return parameters (x-success, x-error, x-cancel) as Drafts will generate and add those parameters.</p>
 
-<p>If the “Wait for response” option is enabled, Drafts will hold processing of the action waiting on a response from the target app. If the target app responds using x-success, the action will continue and any response parameters provided by the target app will be available in the <code class="highlighter-rouge">context.callbackResponses</code> (<a href="https://github.com/agiletortoise/drafts-documentation/wiki/Context">docs</a>) object for subsequent script steps in the action. If the target app responds with x-cancel callback, the action will be cancelled - x-error will fail the action and log responses.</p>
+<p>If the “Wait for response” option is enabled, Drafts will hold processing of the action waiting on a response from the target app. If the target app responds using x-success, the action will continue and any response parameters provided by the target app will be available in the <code class="highlighter-rouge">context.callbackResponses</code> (<a href="https://github.com/agiletortoise/drafts-documentation/wiki/Context">docs</a>) object for subsequent script steps in the action. Additionally, new template tags will be defined for each parameter included in the callback response, named “callback_parameterName”.  For example, if the callback included <code class="highlighter-rouge">result=Hello</code>, the template tag <code class="highlighter-rouge">[[callback_result]]</code> would be available for later action steps in the same action, and it would return <code class="highlighter-rouge">Hello</code>. If the target app responds with x-cancel callback, the action will be cancelled - x-error will fail the action and log responses.</p>
 
 <p>If “Wait for response” is enabled, Drafts will wait for 120 seconds for a response from the target app, and cancel the remainder of the action if none is received.</p>
 

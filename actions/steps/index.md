@@ -3,14 +3,24 @@ title: Action Steps
 ---
 # Action Steps
 
+### System
+
 - [Clipboard]({{ site.baseurl }}/actions/steps/clipboard)
 - [Mail]({{ site.baseurl }}/actions/steps/mail)
 - [Message]({{ site.baseurl }}/actions/steps/message)
 - [Share]({{ site.baseurl }}/actions/steps/share)
-- [Open URL]({{ site.baseurl }}/actions/steps/openurl)
-- [Callback URL]({{ site.baseurl }}/actions/steps/callbackurl)
-- [Run Workflow]({{ site.baseurl }}/actions/steps/runworkflow)
+- [Export]({{ site.baseurl }}/actions/steps/export)
+
+### Services
+
 - [Dropbox]({{ site.baseurl }}/actions/steps/dropbox)
 - [Twitter]({{ site.baseurl }}/actions/steps/twitter)
 - [Google Drive]({{ site.baseurl }}/actions/steps/googledrive)
-- [Export]({{ site.baseurl }}/actions/steps/export)
+
+### Advanced
+
+- [Script]({{ site.baseurl }}/actions/steps/script)
+- [Open URL]({{ site.baseurl }}/actions/steps/openurl)
+- [Callback URL]({{ site.baseurl }}/actions/steps/callbackurl)
+- [Run Workflow]({{ site.baseurl }}/actions/steps/runworkflow)
+- [Include Action]({{ site.baseurl }}/actions/steps/includeaction)

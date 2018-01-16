@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
 <!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>Action Step – Dropbox | Drafts 5</title>
-<meta property="og:title" content="Action Step – Dropbox" />
+<title>Action Step – Export | Drafts 5</title>
+<meta property="og:title" content="Action Step – Export" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Documentation for Drafts 5" />
 <meta property="og:description" content="Documentation for Drafts 5" />
-<link rel="canonical" href="http://localhost:4000/drafts-documentation/actions/steps/dropbox.html" />
-<meta property="og:url" content="http://localhost:4000/drafts-documentation/actions/steps/dropbox.html" />
+<link rel="canonical" href="http://localhost:4000/drafts-documentation/actions/steps/export.html" />
+<meta property="og:url" content="http://localhost:4000/drafts-documentation/actions/steps/export.html" />
 <meta property="og:site_name" content="Drafts 5" />
 <script type="application/ld+json">
-{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"http://localhost:4000/drafts-documentation/actions/steps/dropbox.html","publisher":null,"image":null,"headline":"Action Step – Dropbox","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"http://localhost:4000/drafts-documentation/actions/steps/export.html","publisher":null,"image":null,"headline":"Action Step – Export","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -47,9 +47,9 @@
       </header>
       <section>
 
-      <h1 id="action-step-dropbox">Action Step: Dropbox</h1>
+      <h1 id="action-step-export">Action Step: Export</h1>
 
-<p>Create, append or prepend to files in <a href="http://dropbox.com">Dropbox</a>.</p>
+<p>Export files to the Files.app. Running this action step will open the document browser and allow selection of a destination folder in any available file provider.</p>
 
 <h2 id="examples">Examples</h2>
 
@@ -57,17 +57,7 @@
 
 <ul>
   <li><strong>Name</strong>: Template for file name, including extension.</li>
-  <li><strong>Path</strong>: Path of folder, relative to Dropbox root, to place file. Default “/” is the root of your Dropbox folder.</li>
   <li><strong>Template</strong>: Template for the content of the file.</li>
-  <li><strong>Write Type</strong>:
-    <ul>
-      <li><strong>create</strong>: Create a new file. If an existing file already exists at the location, create as new file with a number suffix added.</li>
-      <li><strong>replace</strong>: Create new file, overwriting an existing if it exists.</li>
-      <li><strong>prepend</strong>: Prepend template content at the beginning of the file. Create the file if it does not already exist.</li>
-      <li><strong>append</strong>: Append template content at the end of the file. Create the file if it does not already exist.</li>
-    </ul>
-  </li>
-  <li><strong>Identifier</strong>: A string identifier for the Dropbox account to use. This value is only needed if you wish to use more than one Dropbox account with Drafts. If used, all actions with the same identifier will use the same alternate login for Dropbox.</li>
 </ul>
 
 
