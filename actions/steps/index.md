@@ -17,6 +17,10 @@ title: Action Steps
 - [Twitter]({{ site.baseurl }}/actions/steps/twitter)
 - [Google Drive]({{ site.baseurl }}/actions/steps/googledrive)
 
+### Utility
+
+- [Insert Text]({{ site.baseurl }}/actions/steps/inserttext)
+
 ### Advanced
 
 - [Script]({{ site.baseurl }}/actions/steps/script)
