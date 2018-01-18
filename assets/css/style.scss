@@ -5,9 +5,24 @@
 
 body {
   font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a:hover {
   text-decoration: underline;
   font-weight: normal;
+}
+
+.wrapper {
+  padding: 1em;
+}
+#masthead {
+  background-image:url({{ site.baseurl }}/images/web-banner-bg.svg);
+  background-position: center;
+  background-color: #4697EC;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }

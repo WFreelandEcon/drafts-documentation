@@ -212,6 +212,10 @@ footer { width: 270px; float: left; position: fixed; bottom: 50px; -webkit-font-
   header ul { width: 99%; }
   header li, header ul li + li + li { width: 33%; } }
 @media print { body { padding: 0.4in; font-size: 12pt; color: #444; } }
-body { font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+body { font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
 
 a:hover { text-decoration: underline; font-weight: normal; }
+
+.wrapper { padding: 1em; }
+
+#masthead { background-image: url(/drafts-documentation/images/web-banner-bg.svg); background-position: center; background-color: #4697EC; vertical-align: middle; text-align: center; margin: 0; padding: 0; }
