@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Changelog | Drafts 5</title>
+<meta property="og:title" content="Changelog" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Documentation for Drafts 5" />
+<meta property="og:description" content="Documentation for Drafts 5" />
+<link rel="canonical" href="http://localhost:4000/drafts-documentation/beta-changelog.html" />
+<meta property="og:url" content="http://localhost:4000/drafts-documentation/beta-changelog.html" />
+<meta property="og:site_name" content="Drafts 5" />
+<script type="application/ld+json">
+{"name":null,"description":"Documentation for Drafts 5","author":null,"@type":"WebPage","url":"http://localhost:4000/drafts-documentation/beta-changelog.html","publisher":null,"image":null,"headline":"Changelog","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="stylesheet" href="/drafts-documentation/assets/css/style.css?v=e534e756f87bfe35d0dfdcd6653cd1f2abef72d3">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <a href="http://github.com/pages/agiletortoise/drafts-documentation"> <h1>Drafts 5</h1> </a>
+        <p>Documentation for Drafts 5</p>
+
+        <p class="view">
+        <a href="/drafts-documentation/">Home</a><br>
+        <a href="/drafts-documentation/overview">Overview</a><br>
+        <a href="/drafts-documentation/actions/">Actions</a><br>
+        <a href="/drafts-documentation/settings/">Settings</a><br>
+        <a href="/drafts-documentation/scripting/">Scripting</a><br>
+        <a href="/drafts-documentation/urls/">URLs</a><br>
+        <a href="/drafts-documentation/beta-changelog">Changelog</a><br>
+        </p>
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="changelog">Changelog</h1>
+
+<h4 id="v01146">v0.1.1.46</h4>
+
+<ul>
+  <li><strong>New:</strong> “Insert Text” action step. <a href="https://agiletortoise.github.io/drafts-documentation/actions/steps/inserttext">Docs</a></li>
+  <li><strong>Fix:</strong> Fixes for a few odd configuration bits in the default action set.  These will not re-install automatically.</li>
+  <li><strong>Change:</strong> Capture and warn about invalid links in HTML preview.</li>
+  <li><strong>Change:</strong> Open valid links in HTML Previews using Safari View Controller instead of the preview window itself.</li>
+</ul>
+
+<h4 id="v01145">v0.1.1.45</h4>
+
+<ul>
+  <li><strong>Change:</strong> Action groups and action export files are now in compressed binary format. This works better for sharing, downloading, etc. - in addition to being a space-saver for backups, etc. - and users don’t get confronted with a wall of JSON which scares them. At least that’s what I’m hoping.  Still need to test more.</li>
+  <li><strong>Change:</strong> Port D4’s RTL language support.</li>
+  <li><strong>New:</strong> Template tag helper keyboard row. Probably not done yet, but it’s something.</li>
+  <li><strong>New:</strong> Include Action step type. Works like the D4 version.</li>
+  <li><strong>New:</strong> Draft script object “languageGrammar” property to read/write the preferred syntax for the draft.</li>
+  <li><strong>New:</strong> <code class="highlighter-rouge">editor.focus()</code> method to return focus to the editor. Useful if an action takes focus to display other UI (like a prompt) and you would like to return to editing mode.</li>
+  <li><strong>Change:</strong> A few tweaks in the default action groups.</li>
+  <li><strong>Fix:</strong> Action group backup was being a bit too agressive about ensuring the safety of your Action Groups.</li>
+  <li><strong>Change:</strong> More tweaks to javascript editing and syntax highlighting.</li>
+  <li><strong>New:</strong> Google Drive action step.  May still be a bit buggy, but should mostly work. <a href="https://agiletortoise.github.io/drafts-documentation/actions/steps/googledrive">Docs</a></li>
+  <li><strong>New:</strong> “Edit on draft selection” setting (default: true) in Appearance settings. Controls whether tapping a draft in the draft list immediately focuses the draft for editing.</li>
+  <li><strong>New:</strong> Prompt script object now has <code class="highlighter-rouge">addPasswordField(name, label, initialText)</code> method.</li>
+  <li><strong>Fix:</strong> Crash calling reminder.addAlarm() without any parameters.</li>
+  <li><strong>New:</strong> Improvements to Javascript grammar, especially handling comments.</li>
+  <li><strong>New:</strong> Some basic indentation support in Javascript editing.</li>
+  <li><strong>Change:</strong> Default light theme was underlining tasks.</li>
+  <li><strong>Change:</strong> Begin edit on cold start of app.</li>
+  <li><strong>Change:</strong> Script editor should respect javascript editing attributes configured in editor.</li>
+  <li><strong>New:</strong> <code class="highlighter-rouge">Drafts.recentTags()</code> scripting object. Useful for building prompts to select a tag.</li>
+  <li><strong>Fix:</strong> Scrolling jumping around after scripting call that updated text (like setSelectedText()).</li>
+  <li><strong>Fix:</strong> Automatic list completion could cause jumping around in longer drafts.</li>
+  <li><strong>Change:</strong> General improvements to display of prompts and dialogs, but style and animation.</li>
+  <li><strong>Fix:</strong> “Auto-correct” selection was not being saved in Editor settings properly.</li>
+  <li><strong>Fix:</strong> Smart quote and smart dash toggle where not working if you enabled them. They do now. If you like that kind of thing.</li>
+  <li><strong>New:</strong> Launch screen revisions.</li>
+  <li><strong>Fix:</strong> Optional not getting unwrapped flipped to a new dictation session when one expires leaving extraneous characters.</li>
+  <li><strong>New:</strong> Lots of works on IAPs, subs, pitch screens, etc., that you won’t actually see yet.</li>
+  <li><strong>New:</strong> Some work on fleshing out Siri vocabularies. “Capture a note using Drafts”, “Dictate a note with Drafts” should trigger correct intent now.</li>
+</ul>
+
+<h4 id="v01142">v0.1.1.42</h4>
+
+<ul>
+  <li><strong>New:</strong> Work on the on-boarding process.  If you delete and reinstall you will get the first launch experience. Design is not done, but it will on-board an initial set of actions and keys now.  The on-boarding sets up a “Basic” actions group with some common actions, and also loops over a set of actions for popular apps (like OmniFocus, Fantastical, Things, Tweetbot, Ulysses, etc.) and sets up actions in the Basic list for those apps <em>IF</em> the user has that app installed on the device.  This process updates status in iCloud, so the groups will not be re-created on a new install if the user already has been through it on another device, or in a previous install.</li>
+  <li><strong>New:</strong> Arrange mode is now available from a text selection popover menu to arrange only the current selected lines, instead of the full text of the draft.</li>
+  <li><strong>New:</strong> Scripting changes:
+    <ul>
+      <li>app.version: Return current version number of Drafts.</li>
+      <li><code class="highlighter-rouge">device</code> object for access to model, os version, battery level. Useful for scripting actions which behave differently on iPad/iPhone, etc. <a href="https://github.com/agiletortoise/drafts-documentation/wiki/Device">Docs</a></li>
+    </ul>
+  </li>
+  <li><strong>Fix:</strong> Dialogs and prompts could clip longer message texts.</li>
+  <li><strong>Fix:</strong> Enabling Reminder import should request Reminder permissions if they have not already been granted.</li>
+  <li><strong>Change:</strong> Add syntax coloring for ES6 Template literals to javascript language grammar.</li>
+  <li><strong>Change:</strong> Updated to blue app icons.</li>
+  <li><strong>Change:</strong> Change default app icon to gradient blue variant.</li>
+  <li><strong>Fix:</strong> “List in Reminders” action could fail to finish properly.</li>
+</ul>
+
+<h4 id="v01141">v0.1.1.41</h4>
+
+<ul>
+  <li><strong>New:</strong> Dialogs and prompts support keyboard interaction now.  Tab or down arrow, or Shift-tab or up arrow move been selections.  Enter to select the current button.</li>
+  <li><strong>Fix:</strong> Keyboard shortcut (CMD-0) to show actions would hide draft list, but not move main view back if drawer was pinned.</li>
+  <li><strong>Fix:</strong> You should not be able to delete the “no steps” placeholder row in the action editing.</li>
+  <li><strong>New:</strong> Callback URL steps now create template tags for each parameter returned in an x-success callback from the target app, in the format <code class="highlighter-rouge">[[callback_parameter]]</code>. These values are still available via script as well.</li>
+  <li><strong>New:</strong> Run Workflow steps now create a template tag for the result returned in an x-success callback from the Workflow, with the name <code class="highlighter-rouge">[[workflow_result]]</code>. These values are still available via script as well.</li>
+</ul>
+
+<h4 id="v01140">v0.1.1.40</h4>
+
+<ul>
+  <li><strong>New:</strong> Mail action step supports “Send in background”.  The “Use Markdown” option has been removed in favor of the more generic “Send as HTML”. <a href="https://agiletortoise.github.io/drafts-documentation/actions/steps/mail">Docs</a></li>
+  <li><strong>New:</strong> Mail script object has “sendInBackground” property, and, well, can send in background. <a href="https://github.com/agiletortoise/drafts-documentation/wiki/Mail">Docs</a></li>
+  <li><strong>New:</strong> /create, /append and /prepend URLs can now take “tag=…” parameters to attach tags to the draft. <a href="https://agiletortoise.github.io/drafts-documentation/urls/">Docs</a></li>
+  <li><strong>Change:</strong> Shrink size of icons on keys a little.</li>
+  <li><strong>Change:</strong> Make tag and action group slide-overs a little wider.</li>
+  <li><strong>New:</strong> A few more action icons in the Editor category.</li>
+  <li><strong>Fix:</strong> Notification settings should copy with an action if it’s copied/moved.</li>
+</ul>
+
+<h4 id="v01139">v0.1.1.39</h4>
+
+<ul>
+  <li><strong>Change:</strong> More reworking of keyboard selection.  It’s back at the start of the keyboard row, but will scroll with the keys.</li>
+  <li><strong>Fix:</strong> Inability to select a keyboard if one had not already been selected in the installation.</li>
+  <li><strong>Change:</strong> Rewrote url query parameter coding based on AlamoFire implementation, instead of old C one. Hopefully doesn’t break anything.</li>
+  <li><strong>Change:</strong> Move arrange mode access to keyboard selection view (with find-replace).</li>
+  <li><strong>Fix:</strong> Clean up more funky behaviors after cancelling a drawer show animation.</li>
+  <li><strong>Fix:</strong> Crash using URL step set to use Safari with non-http(s) URL.</li>
+  <li><strong>Fix:</strong> Drawers should not dismiss when editing started if pinned.</li>
+  <li><strong>Fix:</strong> JavaScript language grammar handles multiline comments properly now.</li>
+  <li><strong>Fix:</strong> JavaScript language grammar handles regex literals.</li>
+  <li><strong>Fix:</strong> Changes to share extension template would only be saved the first time they were edited.</li>
+  <li><strong>Fix:</strong> Navigating action list by using up-down arrows would not properly highlight the selected row.</li>
+  <li><strong>New:</strong> Add “show” option to reveal tag selection if the recent tags list is empty at the bottom of draft list.</li>
+  <li><strong>Fix:</strong> Some fields which show keyboard in Settings were not picking up the dark keyboard for dark themes.</li>
+</ul>
+
+<h4 id="v01138">v0.1.1.38</h4>
+
+<ul>
+  <li><strong>Change:</strong> Try “Manage keyboards” … button at the end of the scrolling key row.  Can’t promise it will stay there, but worth a try.</li>
+  <li><strong>Fix:</strong> A proper fix (workaround, really) for the double drawer animation weirdness.</li>
+  <li><strong>Change:</strong> Refactored task identifiers and enabling to language grammar definitions. Task marks are now only enabled in Markdown grammar.</li>
+  <li><strong>Fix:</strong> Tags on current draft would not update in editor if changed in script.</li>
+  <li><strong>Change:</strong> Display improvements to recent drafts widget.  Implement pro only mode.</li>
+</ul>
+
+<h4 id="v01137">v0.1.1.37</h4>
+
+<ul>
+  <li><strong>New:</strong> “Callback URL” action step. Similar to Open URL, but appends x-callback-url parameters and can wait for a response from the target app - with result parameters being available subsequent script steps. <a href="https://agiletortoise.github.io/drafts-documentation/actions/steps/callbackurl">Details in the docs</a></li>
+  <li><strong>Change:</strong> “Run Workflow” action steps supports same callback system as new Callback URL step - allowing Drafts to wait for the result of a workflow, to be used in subsequent script steps. <a href="https://agiletortoise.github.io/drafts-documentation/actions/steps/runworkflow">Docs</a></li>
+  <li><strong>New:</strong> context script object adds “callbackResponses” object to access parameters returned by x-callback-url call using Callback URL or Run Workflow steps which “Wait for response”. <a href="https://github.com/agiletortoise/drafts-documentation/wiki/Context">Docs</a></li>
+  <li><strong>Fix:</strong> Probably with animations getting confused by poor gesture timing making both side drawers visible.</li>
+</ul>
+
+<h4 id="v01136">v0.1.1.36</h4>
+
+<ul>
+  <li><strong>New:</strong> TextExpander support. Basically the same as in D4, with a few notes:
+    <ul>
+      <li>TE Settings/refresh are now under a separate screen in Settings.</li>
+      <li>Fill-in snippets are not supported.</li>
+      <li>TE snippets work in the Share extension.</li>
+      <li>Expansion in action templates is supported for shortcuts wrapped in « » as in D4.</li>
+    </ul>
+  </li>
+  <li><strong>New:</strong> Additional and updated App icon options (in Aa view).</li>
+  <li><strong>New:</strong> A couple more categories of action icons from the Symbolicon set.</li>
+  <li><strong>Fix:</strong> “Restore” button in version history works now.</li>
+  <li><strong>Fix:</strong> Drawer interactions will now cancel if directly of swipe is reversed.</li>
+  <li><strong>Fix:</strong> Updated drawer interactions for tags in draft list and groups in action list to match fixes in the other drawer interactions.</li>
+  <li><strong>Fix:</strong> Maybe(?) a fix for case where swiping to left on action in action list could show “Delete” option instead of triggering groups drawer.</li>
+</ul>
+
+<h4 id="v01135">v0.1.1.35</h4>
+
+<ul>
+  <li><strong>Fix:</strong> Main glitches in Backup features introduced yesterday. Most of the failures were due to file naming conflicts.</li>
+  <li><strong>Change:</strong> Support <code class="highlighter-rouge">application/x-www-form-urlencoded</code> params in HTTP request with new setting option for encoding - defaults to <code class="highlighter-rouge">application/json</code>.  <a href="https://github.com/agiletortoise/drafts-documentation/wiki/HTTP">Docs</a></li>
+</ul>
+
+<h4 id="v01134">v0.1.1.34</h4>
+
+<ul>
+  <li><strong>New:</strong> On-demand and automated periodic backups of Drafts and Action Groups to iCloud Drive - configured in Settings &gt; Backup. Currently the periodic interval is set to 7 days when enabled. <a href="https://agiletortoise.github.io/drafts-documentation/settings/backups">Docs</a></li>
+  <li><strong>New:</strong> Mostly finished up Share extension. Append/Prepend available now.</li>
+  <li><strong>Fix:</strong> Performance issue with external keyboard.</li>
+  <li><strong>Fix:</strong> Disable iPhone X input accessory resizing with external keyboard, because of text drop issue.</li>
+  <li><strong>Change:</strong> Update Dropbox action icon to their new logo shape.</li>
+  <li><strong>Fix:</strong> URL encode Workflow name in Run Workflow action.</li>
+  <li><strong>Fix:</strong> Crash after using date formatted template tags in a prompt action step.</li>
+  <li><strong>Fix:</strong> When drawer is visible and pinned, do not grab up-down arrow key from editor.</li>
+  <li><strong>Fix:</strong> Share extension template not saving in settings.</li>
+</ul>
+
+<h4 id="v01132">v0.1.1.32</h4>
+
+<ul>
+  <li><strong>New:</strong> Run Workflow action step.</li>
+  <li><strong>New:</strong> Swipe up or down on extended keyboard row to swap between available keyboards.</li>
+  <li><strong>New:</strong> Sharing action or action group now offers the option to share as URL or File.</li>
+  <li><strong>Change:</strong> Refactored drawer animations and gestures.</li>
+  <li><strong>Fix:</strong> Theme problem on share extension settings page.</li>
+  <li><strong>Fix:</strong> Custom implementations of cut and copy commands to force plain text.</li>
+  <li><strong>Fix:</strong> Case where quick select buttons for action groups could point to invalid groups and not do anything.</li>
+  <li><strong>Fix:</strong> Make sure action group buttons are updated when switching groups.</li>
+  <li><strong>New:</strong> Scripting:
+    <ul>
+      <li>Reminder object now has priority property <a href="https://github.com/agiletortoise/drafts-documentation/wiki/Reminder">Docs</a></li>
+      <li>app.openURL(url) now can take optional boolean param to open in Safari View Controller. <a href="https://github.com/agiletortoise/drafts-documentation/wiki/App">Docs</a></li>
+    </ul>
+  </li>
+  <li><strong>Fix:</strong> Allow a little more padding for key if icon and label are shown to avoid clipping.</li>
+  <li><strong>Fix:</strong> /append URL was, actually, prepending.</li>
+  <li><strong>New:</strong> “Play sounds” setting to disable/enable UI and notification sounds.</li>
+</ul>
+
+<h4 id="v01130">v0.1.1.30</h4>
+
+<ul>
+  <li><strong>Fix:</strong> Workaround for glitching display when pasting text into editor.</li>
+</ul>
+
+<h4 id="v01129">v0.1.1.29</h4>
+
+<ul>
+  <li><strong>New:</strong> Share extension (no append-prepend yet) and related settings.</li>
+  <li><strong>Fix:</strong> Importing action group should not add “(copy)” in action names.</li>
+  <li><strong>Change:</strong> Better activity indication on tapped actions.</li>
+  <li><strong>New:</strong> Misc. UI tweaks, added haptics, etc.</li>
+</ul>
+
+<h4 id="v01127">v0.1.1.27</h4>
+
+<p>!!! IMPORTANT: Before installing this build, you will have to delete and previous builds on the device, or it will crash on launch due to underlying data changes. Sync should restore your data, if it was enabled prior to the deletion, but not a bad idea to back up.</p>
+
+<ul>
+  <li><strong>Fix:</strong> Problem in persisting drafts which could generate a duplicate of the draft in the database when certain timing scenarios were hit.</li>
+  <li><strong>New:</strong> Conflict recognition for incoming sync changes when occuring to the same draft loaded in the editor.</li>
+  <li><strong>Fix:</strong> Action groups now refresh (in list and keyboard) when changes are made to the group, either via manage screens or sync.  This means you should not have to reload keyboards and or the action list to pick up changes.</li>
+  <li><strong>Change:</strong> On new installs, if iCloud is available, enable sync by default.</li>
+</ul>
+
+<h4 id="v01126">v0.1.1.26</h4>
+
+<ul>
+  <li><strong>New:</strong> Actions in the action list are now drop targets for anything that can provide text.  Drag one or more text snippets, text files, drafts to an action and it will be queued and run for each item.</li>
+  <li><strong>Fix:</strong> A variety of storage issues with the new editor settings changes.</li>
+  <li><strong>Fix:</strong> Do not add “(copy)” to action names when importing.</li>
+  <li><strong>New:</strong> Add selectionStart and selectionLength properties to draft script object.</li>
+  <li><strong>New:</strong> Improved editing of action in a group when accessed in Manage screen - including options to duplicate, move actions and drag and drop reordering.</li>
+  <li><strong>Change:</strong> Adjust sidebar pane sizes.</li>
+</ul>
+
+<h4 id="v01125">v0.1.1.25</h4>
+
+<ul>
+  <li><strong>New:</strong> Refactored editor settings by syntax.  All the text related settings (font, size, autocorrect, etc.) are stored separately by syntax and automatically changed when you change syntax - so you can have different fonts and behaviors for Markdown and Javascript, for example.  These are synced to iCloud, but by device - so they will restore from iCloud if reinstalled, but can be different on iPhone and iPad.</li>
+  <li><strong>Fix:</strong> Misc. fixes/improvements to syntax highlighting, especially in Markdown.</li>
+  <li><strong>Fix:</strong> Crasher passing invalid text ranges to some editor script methods.</li>
+  <li><strong>New:</strong> Mail and Message script steps now have contact selection option to insert recipients.</li>
+  <li><strong>New:</strong> /arrange URL scheme to use arrange mode with external apps/services.</li>
+  <li><strong>New:</strong> <code class="highlighter-rouge">editor.find()</code> and <code class="highlighter-rouge">editor.arrange()</code> methods to display arrange and find modes.</li>
+</ul>
+
+<h4 id="v01124">v0.1.1.24</h4>
+
+<ul>
+  <li><strong>Fix:</strong> [[selection]] tag did not default to full contents if there was no selection.</li>
+  <li><strong>Fix:</strong> Possible threading gap that could allow a duplicate draft to be created if the timing was just right running an action.</li>
+</ul>
+
+<h4 id="v01123">v0.1.1.23</h4>
+
+<ul>
+  <li><strong>New:</strong> Recent tag quick access list at bottom of draft list.</li>
+  <li><strong>New:</strong> Recent action group quick access list at the bottom action list.</li>
+  <li><strong>New:</strong> Groups now all appear in the action list sidebar.  Individual groups can be configured with “Available as keyboard” option to also make them visible in the keyboard selector.  A variety of related changes around this also.</li>
+  <li><strong>New:</strong> Add sync activity indicator at top of draft list.</li>
+  <li><strong>Change:</strong> A variety of visual fixes and improvements around the app.</li>
+  <li><strong>New:</strong> Actions now have “use icon” option to display the action’s icon on keyboard keys.</li>
+</ul>
+
+<h4 id="v01121">v0.1.1.21</h4>
+
+<ul>
+  <li><strong>New:</strong> “Recent Drafts” today widget.</li>
+  <li><strong>New:</strong> Dropbox scripting object allows read/write of files in Dropbox via script. (see: https://github.com/agiletortoise/drafts-documentation/wiki/Dropbox)</li>
+  <li><strong>New:</strong> Enhancements to Draft scripting object, including… (details: https://github.com/agiletortoise/drafts-documentation/wiki/Draft)
+    <ul>
+      <li>isArchived, isFlagged, isTrashed properties.</li>
+      <li><code class="highlighter-rouge">find(uuid)</code> to retrieve existing draft by UUID.</li>
+      <li><code class="highlighter-rouge">query(query, filter, tags)</code> method to query and return a list of matching drafts.</li>
+    </ul>
+  </li>
+  <li><strong>New:</strong> <code class="highlighter-rouge">alert(msg);</code> script method to show a simple alert dialog.</li>
+  <li><strong>Fix:</strong> Re-enable some of the Script Editor settings which got disabled by accident in last build.</li>
+  <li><strong>Change:</strong> Styling improvement in action step editing.</li>
+  <li><strong>New:</strong> Start to include summarys in action step list for some types of steps.</li>
+  <li><strong>Fix:</strong> Layout glitch editing clipboard action step.</li>
+  <li><strong>Fix:</strong> Recent drafts available via 3D Touch should not include drafts in trash.</li>
+  <li><strong>Fix:</strong> HTML Preview display issue on iOS 11.2 (same issue Script Editor had).</li>
+  <li><strong>Fix:</strong> Tag keyboard helper suggestions getting clipped.</li>
+</ul>
+
+<h4 id="v01120">v0.1.1.20</h4>
+
+<ul>
+  <li><strong>Fix:</strong> Script editor now displays properly on 11.2 devices.</li>
+  <li><strong>Fix:</strong> undo/redo were not working due to extra call to registerUndo points.</li>
+  <li><strong>Change:</strong> Build with iOS 11.2 b2 SDK on Xcode 9.2b2</li>
+</ul>
+
+<h4 id="v01119">v0.1.1.19</h4>
+
+<ul>
+  <li>Scripting changes (details on Wiki: https://github.com/agiletortoise/drafts-documentation/wiki):
+    <ul>
+      <li><strong>New:</strong> Calendar and Event scripting objects to create calendar events.</li>
+      <li><strong>New:</strong> “context” object in scripts with cancel and fail calls to stop execution of additional steps.</li>
+      <li><strong>New:</strong> “action” object in scripts to query current action information and find actions by name.</li>
+      <li><strong>New:</strong> <code class="highlighter-rouge">app.queueAction(action, draft)</code> method to queue and action to run after the current action.</li>
+      <li><strong>Change:</strong> Moved “getClipboard” and “setClipboard” methods from editor to app object. They make more sense there.</li>
+      <li><strong>New:</strong> <code class="highlighter-rouge">app.htmlToClipboard(html)</code> method. Takes HTML and converts it to rich-text in the clipboard - compatible with pasting into most rich-text apps (Mail, Pages, etc.).</li>
+    </ul>
+  </li>
+  <li><strong>Fix:</strong> Clean up of a few styling issues in settings screens.</li>
+  <li><strong>Change:</strong> Contrast tweaks in dark theme.</li>
+</ul>
+
+<h4 id="v01118">v0.1.1.18</h4>
+
+<ul>
+  <li><strong>New:</strong> Prompt action step type. Works just like in D4.</li>
+  <li><strong>New:</strong> Clipboard action step now supports append/prepend.</li>
+  <li><strong>New:</strong> Export operation in drafts list to export selected drafts.</li>
+  <li><strong>New:</strong> Export feature in Settings to export json or csv dumps of drafts.</li>
+  <li><strong>Change:</strong> “Operations” in draft list should error if no drafts are selected.</li>
+  <li><strong>Fix:</strong> Fix URL encoding of line feeds.</li>
+  <li><strong>Fix:</strong> Better handling of clearing tags from the list when no remaining drafts are assigned to a tag.</li>
+  <li><strong>Change:</strong> Hide tag shelf if draft list is hidden.</li>
+  <li><strong>Change:</strong> Hide action group shelf if action list hidden.</li>
+  <li><strong>New:</strong> FileManager.createLocal() and FileManager.createCloud() convenience methods.</li>
+</ul>
+
+<h4 id="v01117">v0.1.1.17</h4>
+
+<ul>
+  <li><strong>Fix:</strong> Sync issues preventing edits of existing drafts from syncing properly.</li>
+  <li><strong>Fix:</strong> A couple of crashing issues in template evaluation, particularly of  url encoding.  Most recursive URLs should work now, but “AllowEmpty” doesn’t do anything as of now, so they might end back in the target app.</li>
+  <li><strong>Fix:</strong> Issue with duplicate insert which could hang sync.</li>
+  <li><strong>Fix:</strong> Dropbox append/prepend would fail if file did not already exist.</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>Fix:</strong></td>
+          <td> </td>
+          <td>clipboard</td>
+          <td> </td>
+          <td>tag in incoming URLs should become blank string if nothing is in clipboard.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><strong>Fix:</strong> Running action from keyboard would not properly save changes to the draft before running.</li>
+  <li><strong>New:</strong> Trash is now swept leaving only the last 7 days of drafts when the app is sent to the background.</li>
+</ul>
+
+<h4 id="v01116">v0.1.1.16</h4>
+
+<ul>
+  <li><strong>New:</strong> “File” action step type to create/append/prepend to files in either the Local app storage or iCloud Drive.</li>
+  <li><strong>New:</strong> FileManager script object. This allows reading from and writing to files in both the Drafts’ local documents directory (visible in Files.app) or iCloud Drive (in “Drafts5” folder).
+    <ul>
+      <li><a href="https://github.com/agiletortoise/drafts-documentation/wiki/FileManager">FileManager docs</a></li>
+    </ul>
+  </li>
+  <li><strong>Change:</strong> Improve visibility of sidebar pinning buttons when available (mainly on iPad)</li>
+  <li><strong>Fix:</strong> Custom template tags defined in scripts were not being evaluated properly.</li>
+  <li><strong>Fix:</strong> Attempt to create Reminder objects in script should request Reminders access permissions if not already granted.</li>
+</ul>
+
+<h4 id="v01115">v0.1.1.15</h4>
+
+<ul>
+  <li><strong>New:</strong> Prompt scripting object for creation and display of prompt dialogs with custom text input and buttons (see docs: https://github.com/agiletortoise/drafts-documentation/wiki/Prompt)</li>
+  <li><strong>Fix:</strong> Tapping on the draft in Siri after using “Create note using Drafts…” properly opens the new draft now.</li>
+  <li><strong>Fix:</strong> Crash deleting action step if it was the only action step in the action.</li>
+  <li><strong>Fix:</strong> If draft loaded in editor is moved to the trash, start a new draft.</li>
+  <li><strong>Fix:</strong> Search button from widget now works.</li>
+  <li><strong>Fix:</strong> /search URL scheme now works. Supports query and new “tag” arguments.</li>
+  <li><strong>Fix:</strong> Set the app badge to 0 using the old API because Apple’s new API doesn’t work for 0 because ??</li>
+  <li><strong>New:</strong> Custom template tags defined by “draft.setTemplateTag(name, value)” javascript calls are not evaluated in templates properly.</li>
+  <li>Laying some groundwork for the watchOS app in the underlying frameworks.</li>
+</ul>
+
+<h4 id="v01114">v0.1.1.14</h4>
+
+<ul>
+  <li><strong>New:</strong> Work on URL schemes.  Most of the same URLs supported by D4 should work now, just with the drafts5: scheme.</li>
+  <li><strong>Change:</strong> Tweaks to Find and Replace view.</li>
+  <li><strong>Change:</strong> Theme preview improvements.</li>
+  <li><strong>New:</strong> “Copy to Drafts” file imports work now.</li>
+  <li><strong>Change:</strong> Switch to sharing and import of Action Groups and Actions using URL (in leiu of files) for better compatibility.</li>
+  <li><strong>New:</strong> Fill in a few more missing action icons.</li>
+</ul>
+
+<h4 id="v01113">v0.1.1.13</h4>
+
+<ul>
+  <li><strong>New:</strong> List auto-completion for Markdown and TaskPaper language grammars.</li>
+  <li><strong>New:</strong> Alternate app icons available in Appearance settings.  Preliminary set, options may change.</li>
+  <li><strong>New:</strong> Reminders import functionality. Can be configured in Settings.</li>
+  <li><strong>Fix:</strong> Actions with “use default” dispositions did not always properly inherit the disposition setting of their action group.</li>
+  <li><strong>Change:</strong> Some Script Editor changes for better flow.  Syntax checker warning symbol added.</li>
+</ul>
+
+<h4 id="v01112">v0.1.1.12</h4>
+
+<ul>
+  <li><strong>New:</strong> Reminder action step.</li>
+  <li><strong>New:</strong> List in Reminders action step.</li>
+  <li><strong>New:</strong> Reminder and Reminder list scripting interfaces, including alarms. Details in wiki…
+    <ul>
+      <li><a href="https://github.com/agiletortoise/drafts-documentation/wiki/Reminder">Reminder</a></li>
+      <li><a href="https://github.com/agiletortoise/drafts-documentation/wiki/ReminderList">ReminderList</a></li>
+      <li><a href="https://github.com/agiletortoise/drafts-documentation/wiki/Alarm">Alarm</a></li>
+    </ul>
+  </li>
+  <li><strong>Change:</strong> Disable landscape support on iPhone, at least for now.</li>
+  <li><strong>Change:</strong> Fix up some visual inconsistencies across views.</li>
+  <li><strong>Change:</strong> Insert custom popover view background class for better styling.</li>
+  <li><strong>New:</strong> Expand theming to buttons and action tint colors.</li>
+  <li><strong>Fix:</strong> Modifications to the draft currently in editor from the draft list (archiving, etc.) could get lost when editor re-saved draft.</li>
+</ul>
+
+<h4 id="v01111">v0.1.1.11</h4>
+
+<ul>
+  <li><strong>Fix:</strong> Deleting action steps did not work properly.</li>
+  <li><strong>New:</strong> Added template tag and processTemplate methods to draft object in scripting (Details: https://github.com/agiletortoise/drafts-documentation/wiki/Draft)</li>
+  <li><strong>Fix:</strong> Script methods on editor object which change text should register undo points so the change can be reverted with undo.</li>
+  <li><strong>Fix:</strong> Change to draft content in action script might not be loaded in the editor.</li>
+  <li><strong>Fix:</strong> Extended keyboard should reload action group after changes are made in the “Manage” screen.</li>
+  <li><strong>Fix:</strong> List indentations for ordered lists in Markdown language grammar did not indent wrapped lines properly.</li>
+  <li><strong>Fix:</strong> Deleting actions in manage groups views did not work properly.</li>
+  <li><strong>Fix:</strong> Some encoding issues for certain characters posting to twitter.</li>
+</ul>
+
+<h4 id="v01110">v0.1.1.10</h4>
+
+<ul>
+  <li><strong>Change:</strong> Sync can now be enabled in Settings - can’t promise I won’t clear data, however.</li>
+  <li><strong>Change:</strong> Tweak momentum for drawer gestures a little.</li>
+  <li><strong>Change:</strong> Make “Get info” keyboard shortcut opt-cmd-I to avoid conflict with italics.</li>
+  <li><strong>Change:</strong> Default draft list sort order to “modified” on new install.</li>
+  <li><strong>New:</strong> HTML Preview action step type.</li>
+  <li><strong>Fix:</strong> Add title to step editing views.</li>
+  <li><strong>New:</strong> Tweaks to recent tag suggestions, including way to clear recent list.</li>
+  <li><strong>Fix:</strong> Prevent keyboard shortcuts from interferring with other views (like Script Editor)</li>
+  <li><strong>Change:</strong> Keyboard shortcut for “Enter” in draft list should hide draft list.</li>
+  <li><strong>New:</strong> Incorporate Date.js library into Scripting context for easy date parsing/manipulation (http://www.datejs.com)</li>
+  <li><strong>Change:</strong> Improve display of table view separators.</li>
+  <li><strong>New:</strong> “Remove tag” operation in draft list.</li>
+  <li><strong>Change:</strong> Build with Xcode 9.1 against 11.1 SDK.</li>
+</ul>
+
+
+      </section>
+      <footer>
+        
+        <p>by <a href="http://github.com/agiletortoise">agiletortoise</a></p>
+        
+      </footer>
+    </div>
+    <script src="/drafts-documentation/assets/js/scale.fix.js"></script>
+
+
+  
+  </body>
+</html>
