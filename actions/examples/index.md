@@ -20,6 +20,8 @@ Below are several sample Action Groups to be installed in Drafts 5. We will be u
 
 - **Add to List** - [Download](./downloads/Add-to-list.draftsAction)
   - Prompt user to select category, append draft to list tagged "lists" for that category. Example of maintaining "Movies to Watch" or other simple lists.
+- **New with Template & Tags** - [Download](./downloads/New-with-Template-Tags.draftsAction)
+  - Creates a new draft with a meeting notes template pre-filled and "meetings" tag assigned.
 - **Post Gist to Github** - [Download](./downloads/Post-Gist-to-Github.draftsAction)
   - Use HTTP scripting to create an anonymous Gist on Github and place the URL in the clipboard.
 - **Post to Micro.blog** - [Download](./downloads/Post-to-Micro-blog.draftsAction)
