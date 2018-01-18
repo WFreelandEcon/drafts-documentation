@@ -39,3 +39,11 @@ This list covers key changes and updates in Drafts 5 for those familiar with ear
 - **Improved on-demand and automatic backup of drafts and actions**.
 - **New themed Share extension** with syntax-highlighting, TextExpander support and option open in Drafts.
 - **Spotlight, Handoff and all the other goodies**.
+
+#### The Business Bits
+
+- **Drafts 5 will be released as a new app**.  Drafts 5 will not replace Drafts 4, but install along side it.
+- **Drafts 4 will continue to be supported and available**. Drafts 4 will remain in the store and be supported at this time. People can choose to migrate to Drafts 5 if and when they feel they are ready.
+- **Drafts 5 will offer a generous free version**. Drafts 5 will be a free download, with a generous feature set.
+- **Drafts Pro** Advanced features and customizations will be available as part of the optional *Drafts Pro* subcription.
+- *We hope to bring Drafts to the Mac*. A lot of work has been done in the Drafts 5 development cycle to prepare the app to move to the Mac, but we do not have anything to announce at this time.
