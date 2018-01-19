@@ -13,7 +13,7 @@ title: Changelog
 - **Fix:** Do not warn about invalid callback url if the source action step did not have "Wait for response" enabled.
 - **Fix:** VO labels for pin button not updated for status.
 - **Fix:** A few layout issues on the little phones.
-q
+
 #### v0.1.1.46
 
 - **New:** "Insert Text" action step. [Docs](https://agiletortoise.github.io/drafts-documentation/actions/steps/inserttext)
