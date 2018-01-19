@@ -48,9 +48,20 @@
 
       <h1 id="changelog">Changelog</h1>
 
-<h4 id="v01146">v0.1.1.46</h4>
+<h4 id="v01147">v0.1.1.47</h4>
 
 <ul>
+  <li><strong>New:</strong> Watch app. I have some other plans for it, but it is currently a port of the updated D4 watch app. Not super well tested, but I think it mostly works. Going to run it through the paces myself this weekend.  Will circle back on it and add Siri and some other planned features soon.  I made a couple UI flips just to make it distinguishable from the D4 watch app.</li>
+  <li><strong>Change:</strong> Darken blue icon sets slightly.</li>
+  <li><strong>Fix:</strong> Do not ask for Siri access if Siri is disabled.</li>
+  <li><strong>Fix:</strong> Do not start displaying drawers when scrolling a long tag list.</li>
+  <li><strong>Change:</strong> If focus is dismissed from tag entry field without assigning tag, clear the field.</li>
+  <li><strong>Fix:</strong> Do not warn about invalid callback url if the source action step did not have “Wait for response” enabled.</li>
+  <li><strong>Fix:</strong> VO labels for pin button not updated for status.</li>
+  <li><strong>Fix:</strong> A few layout issues on the little phones.
+q
+    <h4 id="v01146">v0.1.1.46</h4>
+  </li>
   <li><strong>New:</strong> “Insert Text” action step. <a href="https://agiletortoise.github.io/drafts-documentation/actions/steps/inserttext">Docs</a></li>
   <li><strong>Fix:</strong> Fixes for a few odd configuration bits in the default action set.  These will not re-install automatically.</li>
   <li><strong>Change:</strong> Capture and warn about invalid links in HTML preview.</li>
@@ -98,7 +109,7 @@
   <li><strong>New:</strong> Scripting changes:
     <ul>
       <li>app.version: Return current version number of Drafts.</li>
-      <li><code class="highlighter-rouge">device</code> object for access to model, os version, battery level. Useful for scripting actions which behave differently on iPad/iPhone, etc. <a href="https://github.com/agiletortoise/drafts-documentation/wiki/Device">Docs</a></li>
+      <li><code class="highlighter-rouge">device</code> object for access to model, os version, battery level. Useful for scripting actions which behave differently on iPad/iPhone, etc. 1<a href="https://github.com/agiletortoise/drafts-documentation/wiki/Device">Docs</a></li>
     </ul>
   </li>
   <li><strong>Fix:</strong> Dialogs and prompts could clip longer message texts.</li>

@@ -3,6 +3,17 @@ title: Changelog
 ---
 # Changelog
 
+#### v0.1.1.47
+
+- **New:** Watch app. I have some other plans for it, but it is currently a port of the updated D4 watch app. Not super well tested, but I think it mostly works. Going to run it through the paces myself this weekend.  Will circle back on it and add Siri and some other planned features soon.  I made a couple UI flips just to make it distinguishable from the D4 watch app.
+- **Change:** Darken blue icon sets slightly.
+- **Fix:** Do not ask for Siri access if Siri is disabled.
+- **Fix:** Do not start displaying drawers when scrolling a long tag list.
+- **Change:** If focus is dismissed from tag entry field without assigning tag, clear the field.
+- **Fix:** Do not warn about invalid callback url if the source action step did not have "Wait for response" enabled.
+- **Fix:** VO labels for pin button not updated for status.
+- **Fix:** A few layout issues on the little phones.
+q
 #### v0.1.1.46
 
 - **New:** "Insert Text" action step. [Docs](https://agiletortoise.github.io/drafts-documentation/actions/steps/inserttext)
@@ -47,7 +58,7 @@ title: Changelog
 - **New:** Arrange mode is now available from a text selection popover menu to arrange only the current selected lines, instead of the full text of the draft.
 - **New:** Scripting changes:
     - app.version: Return current version number of Drafts.
-    - `device` object for access to model, os version, battery level. Useful for scripting actions which behave differently on iPad/iPhone, etc. [Docs](https://github.com/agiletortoise/drafts-documentation/wiki/Device)
+    - `device` object for access to model, os version, battery level. Useful for scripting actions which behave differently on iPad/iPhone, etc. 1[Docs](https://github.com/agiletortoise/drafts-documentation/wiki/Device)
 - **Fix:** Dialogs and prompts could clip longer message texts.
 - **Fix:** Enabling Reminder import should request Reminder permissions if they have not already been granted.
 - **Change:** Add syntax coloring for ES6 Template literals to javascript language grammar.
