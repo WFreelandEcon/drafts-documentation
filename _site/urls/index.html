@@ -66,8 +66,9 @@
   <li><strong>Arguments</strong>
     <ul>
       <li><strong>text</strong> <em>[string, required]</em> : Text to be used at the content of the new draft.</li>
-      <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
       <li><strong>tag</strong> <em>[string]</em> : Name of a tag to attach to the draft. Parameter can appear multiple times to add more than one tag.</li>
+      <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
+      <li><strong>allowEmpty</strong> <em>[boolean, optional]</em> : If an action parameter is provided, adding <code class="highlighter-rouge">allowEmpty=false</code> to the URL will prevent that action from running if the text is empty. This can be used to terminate a loop of x-callback-urls running on lines of a draft.</li>
     </ul>
   </li>
   <li><strong>Examples</strong>
@@ -90,6 +91,7 @@
     <ul>
       <li><strong>uuid</strong> <em>[string, required]</em> : The UUID identifier for a draft.</li>
       <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
+      <li><strong>allowEmpty</strong> <em>[boolean, optional]</em> : If an action parameter is provided, adding <code class="highlighter-rouge">allowEmpty=false</code> to the URL will prevent that action from running if the text is empty. This can be used to terminate a loop of x-callback-urls running on lines of a draft.</li>
     </ul>
   </li>
   <li><strong>Examples</strong>
@@ -135,6 +137,7 @@
       <li><strong>uuid</strong> <em>[string, required]</em> : The UUID identifier for a draft.</li>
       <li><strong>text</strong> <em>[string, required]</em> : Text to add.</li>
       <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
+      <li><strong>allowEmpty</strong> <em>[boolean, optional]</em> : If an action parameter is provided, adding <code class="highlighter-rouge">allowEmpty=false</code> to the URL will prevent that action from running if the text is empty. This can be used to terminate a loop of x-callback-urls running on lines of a draft.</li>
       <li><strong>tag</strong> <em>[string]</em> : Name of a tag to attach to the draft. Parameter can appear multiple times to add more than one tag.</li>
     </ul>
   </li>
@@ -159,6 +162,7 @@
       <li><strong>uuid</strong> <em>[string, required]</em> : The UUID identifier for a draft.</li>
       <li><strong>text</strong> <em>[string, required]</em> : Text to add.</li>
       <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
+      <li><strong>allowEmpty</strong> <em>[boolean, optional]</em> : If an action parameter is provided, adding <code class="highlighter-rouge">allowEmpty=false</code> to the URL will prevent that action from running if the text is empty. This can be used to terminate a loop of x-callback-urls running on lines of a draft.</li>
       <li><strong>tag</strong> <em>[string]</em> : Name of a tag to attach to the draft. Parameter can appear multiple times to add more than one tag.</li>
     </ul>
   </li>
@@ -200,6 +204,7 @@
     <ul>
       <li><strong>text</strong> <em>[string, required]</em> : Text to add.</li>
       <li><strong>action</strong> <em>[string, optional]</em> : Name of an action in the action list. If provided, this action will be run on the specified draft.</li>
+      <li><strong>allowEmpty</strong> <em>[boolean, optional]</em> : If an action parameter is provided, adding <code class="highlighter-rouge">allowEmpty=false</code> to the URL will prevent that action from running if the text is empty. This can be used to terminate a loop of x-callback-urls running on lines of a draft.</li>
     </ul>
   </li>
   <li><strong>Examples</strong>

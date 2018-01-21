@@ -3,6 +3,19 @@ title: Changelog
 ---
 # Changelog
 
+#### v0.1.1.49
+
+- **New:** CallbackURL scripting object.  Allows scripting of x-callback-url calls, similar to Callback URL step, but better suited to sequencing calls or working with results. [Docs](https://github.com/agiletortoise/drafts-documentation/wiki/CallbackURL)
+- **New:** Support for "allowEmpty" parameter in URL schemes where appropriate.
+- **Fix:** Some dialogs with longer messages could result in clipping of buttons.
+- **New:** Add `lastError` property to event object to track errors that might occur when updating.
+- **Fix:** `Calendar.findOrCreate(...)` was not finding calendars properly, resulting in duplicate calendar creation.
+
+#### v0.1.1.48
+
+- **Change:** Improve watch complication assets.
+- **Change:** If background email generates blank body, add a space to prevent Mailgun error.
+
 #### v0.1.1.47
 
 - **New:** Watch app. I have some other plans for it, but it is currently a port of the updated D4 watch app. Not super well tested, but I think it mostly works. Going to run it through the paces myself this weekend.  Will circle back on it and add Siri and some other planned features soon.  I made a couple UI flips just to make it distinguishable from the D4 watch app.
