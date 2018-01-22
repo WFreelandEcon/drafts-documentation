@@ -3,6 +3,23 @@ title: Changelog
 ---
 # Changelog
 
+#### v0.1.1.50
+
+- **Fix:** Callback URL steps now work properly with calls to Drafts own URL schemes. Although if you are doing that, there's probably a better way now - but it works now.
+- **Fix:** If a /runAction URL was used to call an action with an "After success" disposition of Archive or Trash, the text would get saved as a draft, not forgotten as intended.
+- **New:** `app.selectDraft();` method. Opens UI to select a draft - same UI as Share extension selection for appending - and returns the draft object selected (or nil if cancelled). [Docs](https://github.com/agiletortoise/drafts-documentation/wiki/App)
+- **Change:** Tone down notification banner colors in dark themes.
+- **Fix:** Added way to dismiss keyboard in dictation interface on iPhone.
+- **Fix:** Avoid flash of error text when loading dictation screen.
+- **Fix:** Exit link mode when changing drafts.
+- **Fix:** Editing in Arrange mode did not pick up dark mode keyboard appearance.
+- **Change:** Improvements to positioning of drawer anchoring buttons on iPad.
+- **Change:** Put arrange button back in the bottom row.
+- **New:** Arrange mode remembers the last used mode (block-line).
+- **New:** Explainer dialogs on first use of link and arrange mode.
+- **Fix:** Select checkboxes would sometimes not appear when tapping "Select" in action list.
+- **Fix:** Changing theme with action drawer visible did not update appearance on all rows.
+
 #### v0.1.1.49
 
 - **New:** CallbackURL scripting object.  Allows scripting of x-callback-url calls, similar to Callback URL step, but better suited to sequencing calls or working with results. [Docs](https://github.com/agiletortoise/drafts-documentation/wiki/CallbackURL)

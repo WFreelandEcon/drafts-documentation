@@ -48,6 +48,25 @@
 
       <h1 id="changelog">Changelog</h1>
 
+<h4 id="v01150">v0.1.1.50</h4>
+
+<ul>
+  <li><strong>Fix:</strong> Callback URL steps now work properly with calls to Drafts own URL schemes. Although if you are doing that, there’s probably a better way now - but it works now.</li>
+  <li><strong>Fix:</strong> If a /runAction URL was used to call an action with an “After success” disposition of Archive or Trash, the text would get saved as a draft, not forgotten as intended.</li>
+  <li><strong>New:</strong> <code class="highlighter-rouge">app.selectDraft();</code> method. Opens UI to select a draft - same UI as Share extension selection for appending - and returns the draft object selected (or nil if cancelled). <a href="https://github.com/agiletortoise/drafts-documentation/wiki/App">Docs</a></li>
+  <li><strong>Change:</strong> Tone down notification banner colors in dark themes.</li>
+  <li><strong>Fix:</strong> Added way to dismiss keyboard in dictation interface on iPhone.</li>
+  <li><strong>Fix:</strong> Avoid flash of error text when loading dictation screen.</li>
+  <li><strong>Fix:</strong> Exit link mode when changing drafts.</li>
+  <li><strong>Fix:</strong> Editing in Arrange mode did not pick up dark mode keyboard appearance.</li>
+  <li><strong>Change:</strong> Improvements to positioning of drawer anchoring buttons on iPad.</li>
+  <li><strong>Change:</strong> Put arrange button back in the bottom row.</li>
+  <li><strong>New:</strong> Arrange mode remembers the last used mode (block-line).</li>
+  <li><strong>New:</strong> Explainer dialogs on first use of link and arrange mode.</li>
+  <li><strong>Fix:</strong> Select checkboxes would sometimes not appear when tapping “Select” in action list.</li>
+  <li><strong>Fix:</strong> Changing theme with action drawer visible did not update appearance on all rows.</li>
+</ul>
+
 <h4 id="v01149">v0.1.1.49</h4>
 
 <ul>
