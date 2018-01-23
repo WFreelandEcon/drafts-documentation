@@ -3,6 +3,15 @@ title: Changelog
 ---
 # Changelog
 
+#### v0.1.1.51
+
+- **New:** Tag and Action Group panels in sidebars can now be swiped away, in addition to tap dismissal, for consistency.
+- **Fix:** Arrange button at bottom not working.
+- **Fix:** Selecting draft with draft list anchored should not dismiss list.
+- **Fix:** Display glitches with text in search fields.
+- **Change:** Don't disable new draft timeout setting in pin mode.
+- **New:** Feedback and help entries in Settings.
+
 #### v0.1.1.50
 
 - **Fix:** Callback URL steps now work properly with calls to Drafts own URL schemes. Although if you are doing that, there's probably a better way now - but it works now.
