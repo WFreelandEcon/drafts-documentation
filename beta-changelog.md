@@ -3,6 +3,20 @@ title: Changelog
 ---
 # Changelog
 
+#### v0.1.1.53
+
+- **New:** Action Directory support. [Docs](https://agiletortoise.github.io/drafts-documentation/actions/actiondirectory)
+    - It's not pretty or complete, but it works (I hope...you are suppose to confirm that)
+    - It now supports sharing of Action Groups as well as individual actions.
+    - It now supports updating and/or removing items you have shared. No account needed, each share is tracked with individual secrets synced in your iCloud account. This allows quick fixes for typos, or bug fix updates to shared actions without loosing the unique URL.
+    - *No, I don't need to hear about the lack of search, or discoverability, etc.* Just test that sharing, modifying, removing and install of actions and groups works, please.
+    - *It is entirely possible I will need to wipe data from the beta directory* due to issues if they come up, or format changes. Don't rely on it as a backup.
+- **Fix:** Status bar and keyboard appearrance should respect style preference, regardless of whether the style is used as "light" or "dark" mode.
+- **Fix:** Drafts created by Siri should capture location.
+- **Fix:** Display glitch showing part of sidebars on iPad coming out of split view.
+- **Fix:** Improvements to output of [[safe_title]] template tag.
+- **Fix:** When exporting actions or groups to file, make sure the file name is "safe" for the file system.
+
 #### v0.1.1.51
 
 - **New:** Tag and Action Group panels in sidebars can now be swiped away, in addition to tap dismissal, for consistency.
