@@ -30,6 +30,7 @@ This list covers key changes and updates in Drafts 5 for those familiar with ear
 - **Dramatically enhanced scripting capabilities**. Query and update drafts, read and write files, integrate with web services (HTTP requests), generate reminders and events and more.
 - **Improved support for Workflow and Callback URL**. New action steps can wait for results from callback URLs or Workflow, and incorporate those results in the action.
 - **Support for multiple accounts**. Actions can target different accounts for integrated OAuth services like Twitter, Google and Dropbox.
+- **New Action Directory**. Significantly improved sharing of actions through the Action Directory. The directory now supports updating and removing your shared items, and posting of action groups and well as individual actions.
 
 #### General
 
