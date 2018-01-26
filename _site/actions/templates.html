@@ -58,6 +58,7 @@
   <li><code class="highlighter-rouge">[[safe_title]]</code> File name safe version of the first line with white-space and punctuation characters removed.</li>
   <li><code class="highlighter-rouge">[[body]]</code> The remainder of the draft text after the first line is removed.</li>
   <li><code class="highlighter-rouge">[[selection]]</code> If text was selected within the draft before selecting an action, this tag will return only that selected text. If no text was selected, it will return the full text of the draft.</li>
+  <li><code class="highlighter-rouge">[[tags]]</code> Comma-separated list of tags linked to the draft.</li>
   <li><code class="highlighter-rouge">[[line|n]]</code> The text of a specific line number in the draft, where “n” is the line number. i.e. <code class="highlighter-rouge">[[line|1]]</code>, <code class="highlighter-rouge">[[line|2]]</code>.</li>
   <li><code class="highlighter-rouge">[[line|n..n]]</code> In addition to specific lines, the lines tag (above) can accept ranges of lines, such as <code class="highlighter-rouge">[[line|2..5]]</code> for lines 2 through 5. This initial or trailing number in the range can be omitted to indicate the beginning or end, i.e. <code class="highlighter-rouge">[[line|2..]]</code> is line 2 through the end of the draft, <code class="highlighter-rouge">[[line|..4]]</code> is the first for lines of the draft.</li>
   <li><code class="highlighter-rouge">[[selection_start]]</code> The integer index of the start location of the last text selection in the draft.</li>

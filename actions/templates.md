@@ -12,6 +12,7 @@ Drafts actions support a number of tags for dynamically inserting text when an a
 - `[[safe_title]]` File name safe version of the first line with white-space and punctuation characters removed.
 - `[[body]]` The remainder of the draft text after the first line is removed.
 - `[[selection]]` If text was selected within the draft before selecting an action, this tag will return only that selected text. If no text was selected, it will return the full text of the draft.
+- `[[tags]]` Comma-separated list of tags linked to the draft.
 - `[[line|n]]` The text of a specific line number in the draft, where “n” is the line number. i.e. `[[line|1]]`, `[[line|2]]`.
 - `[[line|n..n]]` In addition to specific lines, the lines tag (above) can accept ranges of lines, such as `[[line|2..5]]` for lines 2 through 5. This initial or trailing number in the range can be omitted to indicate the beginning or end, i.e. `[[line|2..]]` is line 2 through the end of the draft, `[[line|..4]]` is the first for lines of the draft.
 - `[[selection_start]]` The integer index of the start location of the last text selection in the draft.
