@@ -3,6 +3,17 @@ title: Changelog
 ---
 # Changelog
 
+#### v0.1.1.54
+
+- **Change:** Reworked recent tags at bottom of drafts list as collection view.
+- **Change:** Reworked recent groups at bottom of drafts list as collection view.
+- **New:** Tap and hold "Select" in draft list to Select All.
+- **New:** Tap and hold "Select" in actions list to Select All.
+- **Fix:** Added way to dismiss keyboard on iPhone in a few places.
+- **Fix:** Twitter steps should fail if template generates empty string.
+- **Change:** Visible state for margin size in Appearance settings.
+- **New:** Added [[tags]] template tag which returns comma separated list of tags.
+
 #### v0.1.1.53
 
 - **New:** Action Directory support. [Docs](https://agiletortoise.github.io/drafts-documentation/actions/actiondirectory)
