@@ -3,6 +3,27 @@ title: Changelog
 ---
 # Changelog
 
+#### v0.1.1.55
+
+- **New:** First stab at Siri support on the Watch. Likely somewhat buggy...but feel free to try "Create a note using Drafts".
+- **Change:** More playing with the blue icons.
+- **New:** Improvements to Taskpaper syntax. Notes are italic and recognized for indentation.
+- **Change:** Swap Flagged and Archive tabs in draft list.
+- **Fix:** Improvements to accuracy of enabled state for next/previous draft buttons.
+- **New:** "Empty Trash" operation when Operations used with no drafts selected.
+- **Fix:** Tapping "Replace All" in find screen could clear draft content if no find text was available.
+- **Fix:** Action Directory posting should save description information used.
+- **Fix:** Avoid crash rendering text for very large drafts (still slow, but shouldn't crash)
+- **Fix:** "Unlisted" switch in directory posting screens should reflect the last value sent to the directory.
+- **Change:** Update custom action icon files to better match Symbolicon set icons.
+- **Fix:** Assets for a few missing action icons.
+- **Change:** Tighten up key icon sizing.
+- **Fix:** Paragraph numbers should now be baseline aligned to text of the line.
+- **Fix:** Overlapping lines in code blocks in "basic" preview stylesheet.
+- **Change:** Swipes for moving between keyboards were logically reversed.
+- **Change:** Improve visibility of empty states.
+- **Change:** Add empty state to find & replace.
+
 #### v0.1.1.54
 
 - **Change:** Reworked recent tags at bottom of drafts list as collection view.
